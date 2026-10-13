@@ -1,4 +1,0 @@
-Put the program's zip file in this folder and name it COLection-0.2.0.zip.
-The Download button on the home page links to downloads/COLection-0.2.0.zip.
-If your file has a different name (or lives on GitHub Releases), change the link in index.html:
-search for "TODO" and for "COLection-0.2.0.zip".

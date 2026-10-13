@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>COLection - count college elections</title>
+  <meta name="description" content="COLection counts preferential and multi-seat college elections, runs the vote on phones and voting stations, and shows every round so anyone can check the result.">
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Public+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to the content</a>
+
+  <header class="top">
+    <a class="brand" href="#top" aria-label="COLection, back to the top">
+      <img src="images/colection-mark.svg" alt="" width="34" height="34">
+      <span>COLection</span>
+    </a>
+    <nav aria-label="Main">
+      <a href="#how">How it works</a>
+      <a href="#voting">Voting</a>
+      <a href="#rules">Rules</a>
+      <a href="#results">Results</a>
+      <a class="btn small" href="#download">Download</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- ================= HERO: the count itself ================= -->
+    <section class="hero" id="top">
+      <div class="hero-copy">
+        <h1>Count college elections, one round at a time.</h1>
+        <p class="lead">COLection counts preferential and multi-seat elections, runs the vote on phones and voting stations, and keeps a record so anyone can check how the result came about.</p>
+        <p class="actions">
+          <a class="btn" href="#download">Download COLection</a>
+          <a class="textlink" href="#how">See how an election runs</a>
+        </p>
+        <p class="fine">Runs on your own computer. Needs no internet while people vote.</p>
+      </div>
+
+      <figure class="ballot-sheet" id="count-demo" aria-labelledby="demo-title">
+        <div class="sheet-head">
+          <div>
+            <h2 id="demo-title">President</h2>
+            <p class="sheet-sub" id="demo-sub">200 ballots, five candidates</p>
+          </div>
+          <p class="round-tag" id="demo-round" aria-hidden="true">Round 1</p>
+        </div>
+        <ol class="bars" id="demo-bars" aria-label="Votes for each candidate in this round"></ol>
+        <p class="threshold-note"><span class="swatch" aria-hidden="true"></span><span id="demo-need">Needs more than half of the votes still counting</span></p>
+        <p class="story" id="demo-story" aria-live="polite"></p>
+        <div class="sheet-controls">
+          <button type="button" id="demo-prev">Previous round</button>
+          <button type="button" id="demo-next" class="primary">Next round</button>
+        </div>
+        <figcaption class="sheet-note">An example count with made-up ballots. The program does this for every position, and shows every round.</figcaption>
+      </figure>
+    </section>
+
+    <!-- ================= HOW IT WORKS: a real sequence ================= -->
+    <section class="band" id="how" aria-labelledby="how-title">
+      <div class="wrap split">
+        <div class="split-text">
+          <h2 id="how-title">Four steps, in the same order every time</h2>
+          <p>Each election lives in its own folder with its own password. The steps down the left of the program take you from the rules to the result, and each one tells you when it is ready.</p>
+          <ol class="steps">
+            <li>
+              <h3>Rules</h3>
+              <p>Say who is being elected and how: single roles, committees, groups with limits, tie rules. Start from a template or build your own.</p>
+            </li>
+            <li>
+              <h3>Collect votes</h3>
+              <p>Import answers from Google Forms, or run the vote in person on phones and voting stations.</p>
+            </li>
+            <li>
+              <h3>Check</h3>
+              <p>Before anything is counted, the program checks that the rules and the people standing fit together, and tells you plainly if they do not.</p>
+            </li>
+            <li>
+              <h3>Count and results</h3>
+              <p>Count, settle any ties, then read, print or sign off the results.</p>
+            </li>
+          </ol>
+        </div>
+        <figure class="shot wide">
+          <img src="images/app-count.png" width="1180" height="520" alt="The Count and results step: four steps down the left, and cards showing 214 ballots counted, 14 candidates and 5 positions above the list of winners." loading="lazy">
+          <figcaption>Step 4 after a count. The demo election here is made up.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ================= VOTING IN PERSON ================= -->
+    <section class="wrap voting" id="voting" aria-labelledby="voting-title">
+      <div class="voting-text">
+        <h2 id="voting-title">Vote in the room, on the voters' own phones or on a station</h2>
+        <p>One computer is the host. Voters join from a QR code on their phone, or sit at a voting station that goes full screen and locks until a password is entered. A person at the desk checks who is who and sends each voter to a free station.</p>
+        <dl class="facts">
+          <div>
+            <dt>Two ways to rank</dt>
+            <dd>Voters can number their choices, or drag names into order. Lines show the fewest and most preferences that count, and a red line marks where their list ends.</dd>
+          </div>
+          <div>
+            <dt>Names stay off ballots</dt>
+            <dd>A ballot carries no name and no time, and new ballots are placed at a random position, so nobody can work out whose is whose.</dd>
+          </div>
+          <div>
+            <dt>Help without a queue</dt>
+            <dd>A voter can tap I need help, and the desk sees which station asked.</dd>
+          </div>
+          <div>
+            <dt>If the host fails</dt>
+            <dd>Stations keep finished ballots, and a second computer can take over from a backup folder so no vote is lost.</dd>
+          </div>
+        </dl>
+      </div>
+      <div class="voting-shots">
+        <figure class="shot phone">
+          <img src="images/app-phone.png" width="600" height="1010" alt="The phone ballot in drag to order mode, with three names ranked, a dashed minimum line, a red end of my list line and a dashed maximum line." loading="lazy">
+          <figcaption>On a phone</figcaption>
+        </figure>
+        <figure class="shot">
+          <img src="images/app-ballot.png" width="1180" height="760" alt="The voting station ballot in drag to order mode with four names ranked and the same lines." loading="lazy">
+          <figcaption>On a voting station</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ================= RULES ================= -->
+    <section class="band tint" id="rules" aria-labelledby="rules-title">
+      <div class="wrap rules">
+        <div class="rules-intro">
+          <h2 id="rules-title">Rules colleges actually use</h2>
+          <p>Elections are rarely just "most votes wins". These are the things the program is built to count correctly.</p>
+        </div>
+        <dl class="ruleset">
+          <dt>One seat</dt>
+          <dd>Each ballot counts for its highest choice still in the count. The candidate with the fewest votes is excluded and their ballots move on, until someone has a majority.</dd>
+          <dt>Many seats</dt>
+          <dd>Committees are counted with a quota. Votes beyond the quota are passed on at a reduced value, and the Ballots tab shows what each ballot was worth in every round.</dd>
+          <dt>Groups and limits</dt>
+          <dd>Cap or reserve places by any group you define, such as gender, year level or international students. The results show which candidates a limit affected.</dd>
+          <dt>Ties</dt>
+          <dd>Decide in advance: ask the returning officer, draw at random, exclude all together or look back at earlier rounds. Every tie and how it was settled is recorded.</dd>
+          <dt>Minimum turnout</dt>
+          <dd>If your rules need a minimum share of the roll to vote, the program tracks it and the report says whether it was met.</dd>
+          <dt>Roles tied to groups</dt>
+          <dd>A position can be open to only some candidates or only some voters, for example a representative chosen by one house.</dd>
+        </dl>
+      </div>
+    </section>
+
+    <!-- ================= RESULTS ================= -->
+    <section class="wrap split reverse" id="results" aria-labelledby="results-title">
+      <figure class="shot">
+        <img src="images/app-report.png" width="1060" height="760" alt="The printable report: a title with the logo, three summary cards, and a results table listing each position and who was elected." loading="lazy">
+        <figcaption>The printable report</figcaption>
+      </figure>
+      <div class="split-text">
+        <h2 id="results-title">Results that can be checked, not just trusted</h2>
+        <ul class="plain">
+          <li><strong>Round by round.</strong> Every tally, every exclusion, and a flow diagram of where votes went.</li>
+          <li><strong>Ballot by ballot.</strong> Scrutineers can look at any ballot and see where it was counted in each round.</li>
+          <li><strong>Count it again.</strong> One button counts again from the saved record and confirms the winners are identical.</li>
+          <li><strong>Sign off.</strong> People sign against a results code. If the election is counted again and anything changes, earlier sign-offs stop applying.</li>
+          <li><strong>One printable report.</strong> Choose what goes in it, then print it or save it as a PDF.</li>
+        </ul>
+        <figure class="shot inline">
+          <img src="images/app-rounds.png" width="1180" height="760" alt="The Round by round tab showing round 1 of the president count with a bar for each candidate." loading="lazy">
+          <figcaption>Round by round, for every position</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ================= TEMPLATES ================= -->
+    <section class="band" id="templates" aria-labelledby="templates-title">
+      <div class="wrap split">
+        <div class="split-text">
+          <h2 id="templates-title">Start from a template, keep your own</h2>
+          <p>The library has ready-made setups for university unions, residential colleges, schools, clubs, community groups, awards nights and yes or no motions. Type a few words to find one, such as "uni", "school" or "club".</p>
+          <p>Built an election you will run again next year? Save its rules as your own template, and send the file to another college so they can use it too. Only the rules are saved, never candidates, voters or votes.</p>
+          <p class="fine">Templates are starting points. Check them against your own constitution before you rely on them.</p>
+        </div>
+        <figure class="shot">
+          <img src="images/app-templates.png" width="790" height="760" alt="The New election window with a search box, a list of school templates and a description of the selected one." loading="lazy">
+          <figcaption>Searching the template library</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ================= HONEST LIMITS ================= -->
+    <section class="wrap limits" id="limits" aria-labelledby="limits-title">
+      <h2 id="limits-title">What to know before you use it</h2>
+      <ul class="plain two">
+        <li>It is meant for in-person votes, with people watching, on a network you trust. Messages between the host and voting stations are encrypted. The phone page is served over the local network without HTTPS, so do not use it on a network you do not trust.</li>
+        <li>It counts the rules you give it. It does not replace your constitution or your returning officer, so check the Rules step against both.</li>
+        <li>Passwords protect each election folder. Keep the recovery key somewhere safe: without the password or the key, nobody can open it.</li>
+        <li>The host computer has to stay on and the program open while people vote.</li>
+      </ul>
+    </section>
+
+    <!-- ================= DOWNLOAD ================= -->
+    <section class="download" id="download" aria-labelledby="download-title">
+      <div class="wrap download-grid">
+        <div>
+          <h2 id="download-title">Download COLection</h2>
+          <p class="lead">Version 0.2.0 for Windows. It is a zip file: unzip it, and follow the three steps beside this.</p>
+          <p class="actions">
+            <!-- TODO: put your zip in the downloads folder (or change this link to your GitHub release) -->
+            <a class="btn" href="downloads/COLection-0.2.0.zip" download>Download the zip</a>
+          </p>
+          <p class="fine">If the program is not signed, Windows may show a warning the first time. That is expected for new software.</p>
+        </div>
+        <ol class="install">
+          <li>
+            <strong>Install Python 3.12 or newer</strong>
+            <span>From python.org. On the first screen of the installer, tick "Add python.exe to PATH".</span>
+          </li>
+          <li>
+            <strong>Unzip the folder</strong>
+            <span>Anywhere you like, for example your Documents folder.</span>
+          </li>
+          <li>
+            <strong>Start it</strong>
+            <span>Open the folder, type <code>cmd</code> in the address bar, press Enter, then run <code>py main.py</code>.</span>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ================= QUESTIONS ================= -->
+    <section class="wrap faq" id="faq" aria-labelledby="faq-title">
+      <h2 id="faq-title">Questions</h2>
+      <details>
+        <summary>Does it need the internet?</summary>
+        <p>Not to vote or count. Phones and voting stations talk to the host over your local network, such as the college Wi-Fi. You only need the internet to download it, or if you import answers from Google Forms.</p>
+      </details>
+      <details>
+        <summary>Can I use Google Forms instead of voting in the program?</summary>
+        <p>Yes. Step 2 can import the answers from a Google Forms file, merge spellings of the same name, and leave out duplicate votes. You then check and count as usual.</p>
+      </details>
+      <details>
+        <summary>Can I change the rules for my own college?</summary>
+        <p>Yes. The Rules step lets you add positions, groups, limits, tie rules and a minimum turnout, and each change is checked straight away so the rules cannot contradict each other.</p>
+      </details>
+      <details>
+        <summary>What happens if a station freezes or a voter walks away?</summary>
+        <p>The desk can take the ballot back and send the voter again. Finished ballots stay safe on the station until a host can take them.</p>
+      </details>
+      <details>
+        <summary>Does it work on a Mac?</summary>
+        <p>The program is written in Python and may run, but it has been built and used on Windows. Treat other systems as untested.</p>
+      </details>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <div class="wrap foot-row">
+      <a class="brand" href="#top" aria-label="COLection, back to the top">
+        <img src="images/colection-mark.svg" alt="" width="28" height="28">
+        <span>COLection</span>
+      </a>
+      <p>Counting college elections. Version 0.2.0.</p>
+    </div>
+  </footer>
+
+  <script src="js/count-demo.js"></script>
+</body>
+</html>

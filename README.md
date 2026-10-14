@@ -6,7 +6,8 @@ A small static site: no build step, no server, no dependencies.
 colection-site/
   index.html           the whole page (text lives here)
   css/style.css        all the styling; colours and fonts are at the top, in :root
-  js/count-demo.js     the example count at the top of the page (edit the made-up ballots here)
+  js/count-demo.js     the example count (edit the made-up ballots here)
+  js/site.js           the scroll effects: the rings, the pinned steps, the sideways rules, the growing report
   images/              screenshots and the logo
   downloads/           put the program's zip in here
 ```
@@ -25,7 +26,7 @@ colection-site/
 - [ ] Decide on a licence and say it somewhere (the page deliberately makes no claim about price or licence).
 - [ ] Add a way to contact you (for example a "Report a problem" link in the footer).
 - [ ] Check you are allowed to name any college or show its logo. The screenshots use a made-up "Example College" with made-up names.
-- [ ] Replace the screenshots with your own if you like. They were taken on Linux, so fonts differ slightly from Windows. Keep the file names, or edit the `<img>` tags.
+- [ ] Replace the screenshots with your own if you like. app-count, app-export and app-rounds show the new Qt program (made on Linux, so fonts differ slightly from Windows); app-ballot, app-phone and app-templates are still from the older look. Keep the file names, or edit the `<img>` tags.
 - [ ] Check the claims in "What to know before you use it" still match the program.
 - [ ] When you release a new version, change the version number in `index.html` (search `0.2.0`).
 
@@ -36,4 +37,4 @@ colection-site/
 
 ## Fonts
 
-The page loads Bricolage Grotesque and Public Sans from Google Fonts. If you want it to work with no outside requests at all, download the fonts and host them in a `fonts/` folder, then replace the `<link>` tags in `index.html` with `@font-face` rules.
+The page loads Inter from Google Fonts. If you want it to work with no outside requests at all, download the fonts and host them in a `fonts/` folder, then replace the `<link>` tags in `index.html` with `@font-face` rules.

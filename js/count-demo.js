@@ -1,4 +1,4 @@
-/* The count on the home page.
+/* The count on the "How counting works" page.
    It counts a small set of made-up ballots with the same idea the program uses for one seat:
    every ballot counts for its highest choice still in the count, the lowest candidate is excluded,
    and their ballots move to the next choice, until someone has more than half of the votes still counting.

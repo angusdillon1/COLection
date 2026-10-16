@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pricing - COLection</title>
+  <meta name="description" content="COLection is free for up to 50 voters. For bigger elections, pick the size and length you need and get your licence by email straight after paying.">
+  <meta name="color-scheme" content="light dark">
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script>document.documentElement.classList.add("js");</script>
+</head>
+<body class="inner">
+  <a class="skip" href="#main">Skip to the content</a>
+
+  <header class="top" id="top-bar">
+    <a class="brand" href="index.html" aria-label="COLection, home">
+      <img src="images/colection-mark.svg" alt="" width="26" height="26">
+      <span>COLection</span>
+    </a>
+    <nav aria-label="Main">
+      <a href="index.html">Overview</a>
+      <a href="counting.html">How counting works</a>
+      <a href="help.html">Help</a>
+      <a href="changelog.html">What's new</a>
+      <a href="pricing.html" aria-current="page">Pricing</a>
+      <a class="pill" href="index.html#download">Download</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="page-hero" aria-labelledby="page-title">
+      <div class="wrap">
+        <h1 id="page-title">Pricing.</h1>
+        <p class="sub">Free for up to 50 voters. For bigger elections, pay once for the size and length you need, and your licence is emailed to you straight away.</p>
+      </div>
+    </section>
+
+    <section class="pricing" aria-labelledby="calc-title">
+      <div class="wrap pricing-grid">
+        <form id="buy" class="calc" novalidate>
+          <h2 id="calc-title" class="calc-title">Work out your price</h2>
+
+          <div class="field">
+            <label for="voters">How many people can vote?</label>
+            <div class="voters-row">
+              <input id="voters" name="voters" inputmode="numeric" autocomplete="off" value="300" aria-describedby="price-note">
+              <input id="voters-range" type="range" min="0" max="1000" value="500" aria-label="Number of voters, slider">
+            </div>
+            <p class="fine">Count everyone on your roll, not just those who usually turn up. A licence covers up to this many voters in each election.</p>
+          </div>
+
+          <fieldset class="field terms">
+            <legend>How long?</legend>
+            <label class="choice"><input type="radio" name="term" value="pass"><span><strong>30-day pass</strong><small>One election</small></span></label>
+            <label class="choice"><input type="radio" name="term" value="1" checked><span><strong>1 year</strong><small>Most popular</small></span></label>
+            <label class="choice"><input type="radio" name="term" value="2"><span><strong>2 years</strong><small>10% off each year</small></span></label>
+            <label class="choice"><input type="radio" name="term" value="3"><span><strong>3 years</strong><small>20% off each year</small></span></label>
+          </fieldset>
+
+          <div class="field two">
+            <div>
+              <label for="org">Organisation name</label>
+              <input id="org" name="org" autocomplete="organization" maxlength="80" placeholder="Carlton Netball Club">
+              <p class="fine">Written on the licence and shown in the program.</p>
+            </div>
+            <div>
+              <label for="email">Email for your licence</label>
+              <input id="email" name="email" type="email" autocomplete="email" maxlength="120" placeholder="you@example.com">
+            </div>
+          </div>
+
+          <label class="agree"><input type="checkbox" id="agree"> <span>I have read the <a href="terms.html" target="_blank" rel="noopener">terms</a>.</span></label>
+
+          <div class="total" aria-live="polite">
+            <p class="amount" id="price">-</p>
+            <p class="detail" id="price-detail"></p>
+          </div>
+          <p class="fine" id="price-note"></p>
+          <button class="btn buy" id="buy-button" type="submit">Pay</button>
+          <p class="buy-message" id="buy-message" role="status"></p>
+        </form>
+
+        <aside class="plain">
+          <h2 class="aside-title">What you get</h2>
+          <ul class="ticks">
+            <li>No limit on how many elections you run while the licence is valid.</li>
+            <li>Your licence arrives by email within a few minutes. Paste it into Settings &gt; Licence. It works without internet.</li>
+            <li>Reports lose the "made with the free version" line.</li>
+            <li>One licence covers every computer you use for your election, including voting stations and a computer that takes over.</li>
+          </ul>
+          <h2 class="aside-title">If a licence ends</h2>
+          <p>Nothing is locked or lost. Your elections, results and exports stay open. The program simply returns to the free version (up to 50 voters).</p>
+          <h2 class="aside-title">Free</h2>
+          <p>Up to 50 voters in an election, and up to 40 guests in a seating plan. Every feature, no time limit. Download it and try it on a real event first.</p>
+          <p><a class="btn" href="index.html#download">Download COLection</a></p>
+        </aside>
+      </div>
+    </section>
+
+    <section class="examples" aria-labelledby="examples-title">
+      <div class="wrap">
+        <h2 id="examples-title">Some examples.</h2>
+        <div class="table-scroll">
+          <table>
+            <thead><tr><th scope="col">Voters</th><th scope="col">30-day pass</th><th scope="col">1 year</th><th scope="col">2 years</th><th scope="col">3 years</th></tr></thead>
+            <tbody id="examples"></tbody>
+          </table>
+        </div>
+        <p class="fine">Prices in Australian dollars. Bigger groups pay more in total but less per voter. Over 5,000 voters, or if you need a purchase order, <a href="#" id="quote-link">ask for a quote</a>.</p>
+      </div>
+    </section>
+
+    <section class="faq" aria-labelledby="faq-title">
+      <div class="wrap">
+        <h2 id="faq-title">Questions.</h2>
+        <details><summary>How is the price worked out?</summary><p>It grows with the number of voters, but more slowly than the voters do: a group ten times the size pays about four times as much. Longer licences get a discount for each extra year. The price you see here is the price charged.</p></details>
+        <details><summary>What counts as a voter?</summary><p>Anyone on the roll of an election. A licence for 300 voters covers any election with up to 300 people on its roll, as many times as you like while it lasts.</p></details>
+        <details><summary>Do seating plans need a licence?</summary><p>The same licence covers them. A guest counts the same as a voter, so a licence for 300 voters also covers seating plans of up to 300 guests. In the free version you can enter any number of guests, but arranging, printing and looking up guests is limited to 40 per plan, and free printouts carry a "made with the free version" line.</p></details>
+        <details><summary>I need a few more voters than I bought.</summary><p>The program will tell you when an election is over the limit, and you can buy a bigger licence. Email us and we will take what you have paid into account.</p></details>
+        <details><summary>Can I use the licence on a different computer?</summary><p>Yes. It is a line of text you paste in on any computer you use for your organisation. It is for your organisation's use, not for sharing with other groups.</p></details>
+        <details><summary>Do you need an invoice or a purchase order?</summary><p>No problem: <a href="#" id="invoice-link">email us</a> with your organisation name, the number of voters and the length you need, and we will send an invoice.</p></details>
+        <details><summary>Can I get a refund?</summary><p>If it does not work for you, tell us within 14 days and we will refund you in full. A refunded licence stops being accepted by updated versions of the program.</p></details>
+        <details><summary>Does the program phone home to check the licence?</summary><p>No. The licence is checked on your computer, with no internet needed. Nothing about your elections or voters ever leaves your computer.</p></details>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot" data-theme="dark">
+    <div class="wrap foot-row">
+      <a class="brand" href="index.html" aria-label="COLection, home">
+        <img src="images/colection-mark.svg" alt="" width="24" height="24">
+        <span>COLection</span>
+      </a>
+      <nav class="foot-nav" aria-label="Footer">
+        <a href="counting.html">How counting works</a>
+        <a href="help.html">Help</a>
+        <a href="changelog.html">What's new</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="terms.html">Terms</a>
+      </nav>
+      <p>Counting elections for any group. Version 0.2.0.</p>
+    </div>
+  </footer>
+  <script src="js/site-config.js"></script>
+  <script src="js/pricing.js"></script>
+  <script src="js/pricing-page.js"></script>
+  <script src="js/site.js"></script>
+  <script>
+    (function () {
+      var c = window.COL_SITE || {}, mail = "mailto:" + (c.CONTACT_EMAIL || "");
+      var q = document.getElementById("quote-link"), i = document.getElementById("invoice-link");
+      if (q) q.href = mail + "?subject=" + encodeURIComponent("COLection quote");
+      if (i) i.href = mail + "?subject=" + encodeURIComponent("COLection invoice request");
+    })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,364 @@
+{
+ "note": "Shared by tests/test_price.py and the website's tests/pricing.test.js",
+ "config": {
+  "currency": "aud",
+  "anchor_voters": 100,
+  "anchor_price": 90,
+  "exponent": 0.6,
+  "minimum": 60,
+  "round_to": 5,
+  "free_voters": 50,
+  "max_online_voters": 5000,
+  "year_factors": {
+   "1": 1.0,
+   "2": 0.9,
+   "3": 0.8
+  },
+  "pass": {
+   "days": 30,
+   "factor": 0.4
+  }
+ },
+ "vectors": [
+  {
+   "voters": 51,
+   "term": "1",
+   "price": 60
+  },
+  {
+   "voters": 51,
+   "term": "2",
+   "price": 110
+  },
+  {
+   "voters": 51,
+   "term": "3",
+   "price": 145
+  },
+  {
+   "voters": 51,
+   "term": "pass",
+   "price": 25
+  },
+  {
+   "voters": 60,
+   "term": "1",
+   "price": 65
+  },
+  {
+   "voters": 60,
+   "term": "2",
+   "price": 120
+  },
+  {
+   "voters": 60,
+   "term": "3",
+   "price": 160
+  },
+  {
+   "voters": 60,
+   "term": "pass",
+   "price": 25
+  },
+  {
+   "voters": 75,
+   "term": "1",
+   "price": 75
+  },
+  {
+   "voters": 75,
+   "term": "2",
+   "price": 135
+  },
+  {
+   "voters": 75,
+   "term": "3",
+   "price": 180
+  },
+  {
+   "voters": 75,
+   "term": "pass",
+   "price": 30
+  },
+  {
+   "voters": 100,
+   "term": "1",
+   "price": 90
+  },
+  {
+   "voters": 100,
+   "term": "2",
+   "price": 160
+  },
+  {
+   "voters": 100,
+   "term": "3",
+   "price": 215
+  },
+  {
+   "voters": 100,
+   "term": "pass",
+   "price": 35
+  },
+  {
+   "voters": 120,
+   "term": "1",
+   "price": 100
+  },
+  {
+   "voters": 120,
+   "term": "2",
+   "price": 180
+  },
+  {
+   "voters": 120,
+   "term": "3",
+   "price": 240
+  },
+  {
+   "voters": 120,
+   "term": "pass",
+   "price": 40
+  },
+  {
+   "voters": 150,
+   "term": "1",
+   "price": 115
+  },
+  {
+   "voters": 150,
+   "term": "2",
+   "price": 205
+  },
+  {
+   "voters": 150,
+   "term": "3",
+   "price": 275
+  },
+  {
+   "voters": 150,
+   "term": "pass",
+   "price": 45
+  },
+  {
+   "voters": 200,
+   "term": "1",
+   "price": 135
+  },
+  {
+   "voters": 200,
+   "term": "2",
+   "price": 245
+  },
+  {
+   "voters": 200,
+   "term": "3",
+   "price": 325
+  },
+  {
+   "voters": 200,
+   "term": "pass",
+   "price": 55
+  },
+  {
+   "voters": 250,
+   "term": "1",
+   "price": 155
+  },
+  {
+   "voters": 250,
+   "term": "2",
+   "price": 280
+  },
+  {
+   "voters": 250,
+   "term": "3",
+   "price": 375
+  },
+  {
+   "voters": 250,
+   "term": "pass",
+   "price": 60
+  },
+  {
+   "voters": 300,
+   "term": "1",
+   "price": 175
+  },
+  {
+   "voters": 300,
+   "term": "2",
+   "price": 315
+  },
+  {
+   "voters": 300,
+   "term": "3",
+   "price": 420
+  },
+  {
+   "voters": 300,
+   "term": "pass",
+   "price": 70
+  },
+  {
+   "voters": 400,
+   "term": "1",
+   "price": 205
+  },
+  {
+   "voters": 400,
+   "term": "2",
+   "price": 370
+  },
+  {
+   "voters": 400,
+   "term": "3",
+   "price": 495
+  },
+  {
+   "voters": 400,
+   "term": "pass",
+   "price": 85
+  },
+  {
+   "voters": 500,
+   "term": "1",
+   "price": 235
+  },
+  {
+   "voters": 500,
+   "term": "2",
+   "price": 425
+  },
+  {
+   "voters": 500,
+   "term": "3",
+   "price": 565
+  },
+  {
+   "voters": 500,
+   "term": "pass",
+   "price": 95
+  },
+  {
+   "voters": 750,
+   "term": "1",
+   "price": 300
+  },
+  {
+   "voters": 750,
+   "term": "2",
+   "price": 545
+  },
+  {
+   "voters": 750,
+   "term": "3",
+   "price": 725
+  },
+  {
+   "voters": 750,
+   "term": "pass",
+   "price": 120
+  },
+  {
+   "voters": 1000,
+   "term": "1",
+   "price": 360
+  },
+  {
+   "voters": 1000,
+   "term": "2",
+   "price": 645
+  },
+  {
+   "voters": 1000,
+   "term": "3",
+   "price": 860
+  },
+  {
+   "voters": 1000,
+   "term": "pass",
+   "price": 145
+  },
+  {
+   "voters": 1500,
+   "term": "1",
+   "price": 455
+  },
+  {
+   "voters": 1500,
+   "term": "2",
+   "price": 825
+  },
+  {
+   "voters": 1500,
+   "term": "3",
+   "price": 1095
+  },
+  {
+   "voters": 1500,
+   "term": "pass",
+   "price": 185
+  },
+  {
+   "voters": 2500,
+   "term": "1",
+   "price": 620
+  },
+  {
+   "voters": 2500,
+   "term": "2",
+   "price": 1120
+  },
+  {
+   "voters": 2500,
+   "term": "3",
+   "price": 1490
+  },
+  {
+   "voters": 2500,
+   "term": "pass",
+   "price": 250
+  },
+  {
+   "voters": 4000,
+   "term": "1",
+   "price": 825
+  },
+  {
+   "voters": 4000,
+   "term": "2",
+   "price": 1480
+  },
+  {
+   "voters": 4000,
+   "term": "3",
+   "price": 1975
+  },
+  {
+   "voters": 4000,
+   "term": "pass",
+   "price": 330
+  },
+  {
+   "voters": 5000,
+   "term": "1",
+   "price": 940
+  },
+  {
+   "voters": 5000,
+   "term": "2",
+   "price": 1695
+  },
+  {
+   "voters": 5000,
+   "term": "3",
+   "price": 2260
+  },
+  {
+   "voters": 5000,
+   "term": "pass",
+   "price": 375
+  }
+ ]
+}

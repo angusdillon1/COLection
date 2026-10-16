@@ -4,10 +4,19 @@ A small static site: no build step, no server, no dependencies.
 
 ```
 colection-site/
-  index.html           the whole page (text lives here)
-  css/style.css        all the styling; colours and fonts are at the top, in :root
+  index.html           the overview (the scroll story)
+  counting.html        how counting works: the interactive count, the rules, the checks
+  help.html            install steps, questions, what to know before you use it
+  pricing.html         the price calculator and Buy button (js/pricing.js, js/pricing-page.js)
+  success.html         the thank-you page that shows the licence (js/success.js)
+  terms.html           DRAFT terms: fill in the [brackets] and have them checked
+  server/              the licence server (Cloudflare Worker) and its README: how payments become licences
+  tests/               `npm test` (needs Node)
+  js/site-config.js    the two settings to fill in: API_BASE and CONTACT_EMAIL
+  changelog.html       what's new in each version (add a new <article class="release"> at the top for each release)
+  css/style.css        all the styling; colours and fonts are at the top, in :root (a dark version follows the visitor's computer)
+  js/site.js           the scroll effects: the rings, the pinned steps, the growing report, the top bar
   js/count-demo.js     the example count (edit the made-up ballots here)
-  js/site.js           the scroll effects: the rings, the pinned steps, the sideways rules, the growing report
   images/              screenshots and the logo
   downloads/           put the program's zip in here
 ```
@@ -28,7 +37,8 @@ colection-site/
 - [ ] Check you are allowed to name any college or show its logo. The screenshots use a made-up "Example College" with made-up names.
 - [ ] Replace the screenshots with your own if you like. app-count, app-export and app-rounds show the new Qt program (made on Linux, so fonts differ slightly from Windows); app-ballot, app-phone and app-templates are still from the older look. Keep the file names, or edit the `<img>` tags.
 - [ ] Check the claims in "What to know before you use it" still match the program.
-- [ ] When you release a new version, change the version number in `index.html` (search `0.2.0`).
+- [ ] When you release a new version, change the version number (search `0.2.0` in every .html file) and add an entry to `changelog.html`.
+- [ ] Add a way to report a problem to `help.html` (there is no contact on the site yet).
 
 ## Publish it for free
 
@@ -38,3 +48,8 @@ colection-site/
 ## Fonts
 
 The page loads Inter from Google Fonts. If you want it to work with no outside requests at all, download the fonts and host them in a `fonts/` folder, then replace the `<link>` tags in `index.html` with `@font-face` rules.
+
+
+## Taking payments
+
+Until `API_BASE` in `js/site-config.js` is filled in, the pricing page's button says "Request an invoice" and opens an email to you with the order filled in: you can sell by hand with `python tools/price.py` and `python tools/issue_licence.py`. To make it automatic, follow `server/README.md`.

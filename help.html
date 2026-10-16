@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Help - COLection</title>
+  <meta name="description" content="Install COLection, answers to common questions, and what to know before you run a real election.">
+  <meta name="color-scheme" content="light dark">
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script>document.documentElement.classList.add("js");</script>
+</head>
+<body class="inner">
+  <a class="skip" href="#main">Skip to the content</a>
+
+  <header class="top" id="top-bar">
+    <a class="brand" href="index.html" aria-label="COLection, home">
+      <img src="images/colection-mark.svg" alt="" width="26" height="26">
+      <span>COLection</span>
+    </a>
+    <nav aria-label="Main">
+      <a href="index.html">Overview</a>
+      <a href="counting.html">How counting works</a>
+      <a href="help.html" aria-current="page">Help</a>
+      <a href="changelog.html">What's new</a>
+      <a href="pricing.html">Pricing</a>
+      <a class="pill" href="index.html#download">Download</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="page-hero" aria-labelledby="page-title">
+      <div class="wrap">
+        <h1 id="page-title">Help.</h1>
+        <p class="sub">Installing the program, common questions, and what to know before you run a real election.</p>
+        <p class="jump"><a href="#install">Install</a><a href="#faq">Questions</a><a href="#limits">Before you use it</a></p>
+      </div>
+    </section>
+
+    <section class="install-sec" id="install" aria-labelledby="install-title">
+      <div class="wrap install-wrap">
+        <div>
+          <h2 id="install-title">Install it.</h2>
+          <p class="sub">It is a zip file. A one-click Windows installer is planned.</p>
+          <p class="actions"><a class="btn" href="downloads/COLection-0.2.0.zip" download>Download the zip</a></p>
+          <p class="fine">If the program is not signed, Windows may show a warning the first time. That is expected for new software.</p>
+        </div>
+        <ol class="install light">
+          <li><strong>Install Python 3.12 or newer</strong><span>From python.org. On the first screen of the installer, tick "Add python.exe to PATH".</span></li>
+          <li><strong>Unzip the folder</strong><span>Anywhere you like, for example your Documents folder.</span></li>
+          <li><strong>Install the parts it needs, once</strong><span>Open the folder, type <code>cmd</code> in the address bar, press Enter, then run <code>py -m pip install -r requirements.txt</code>.</span></li>
+          <li><strong>Start it</strong><span>In the same window, run <code>py main.py</code>.</span></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="faq" id="faq" aria-labelledby="faq-title">
+      <div class="wrap">
+        <h2 id="faq-title">Questions</h2>
+        <details><summary>Does it need the internet?</summary><p>Not to vote or count. Phones and voting stations talk to the host over your local network, such as the college Wi-Fi. You only need the internet to download it, or if you import answers from Google Forms.</p></details>
+        <details><summary>Can I use Google Forms instead of voting in the program?</summary><p>Yes. Step 2 can import the answers from a Google Forms file, merge spellings of the same name, and leave out duplicate votes. You then check and count as usual.</p></details>
+        <details><summary>Can I change the rules for my own group?</summary><p>Yes. The Rules step lets you add positions, groups, limits, tie rules and a minimum turnout, and each change is checked straight away so the rules cannot contradict each other.</p></details>
+        <details><summary>What happens if a station freezes or a voter walks away?</summary><p>The desk can take the ballot back and send the voter again. Finished ballots stay safe on the station until a host can take them.</p></details>
+        <details><summary>How do I make a seating plan?</summary><p>On the home screen choose New seating plan, pick a template (dinner, wedding, exam hall and more), then add guests on the Guests tab, or import them from a spreadsheet. Use the Wishes tab to say who should sit together or apart, press Auto-arrange, and finish on the Print &amp; share tab.</p></details>
+        <details><summary>Can I change the seating after sending it out?</summary><p>Yes. Right-click a guest to cancel them or add a plus-one, and save a snapshot before big changes so you can compare or go back later.</p></details>
+        <details><summary>Does it work on a Mac?</summary><p>The program is written in Python and Qt, so it should run, but it has mainly been built and used on Windows. Treat other systems as untested for now.</p></details>
+      </div>
+    </section>
+
+    <section class="limits" id="limits" aria-labelledby="limits-title">
+      <div class="wrap">
+        <h2 id="limits-title">What to know before you use it.</h2>
+        <ul class="limit-list">
+          <li class="reveal">It is meant for in-person votes, with people watching, on a network you trust. Messages between the host and voting stations are encrypted. The phone page is served over the local network without HTTPS, so do not use it on a network you do not trust.</li>
+          <li class="reveal">It counts the rules you give it. It does not replace your constitution or your returning officer, so check the Rules step against both.</li>
+          <li class="reveal">Passwords protect each election folder. Keep the recovery key somewhere safe: without the password or the key, nobody can open it.</li>
+          <li class="reveal">The host computer has to stay on and the program open while people vote.</li>
+        </ul>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="foot" data-theme="dark">
+    <div class="wrap foot-row">
+      <a class="brand" href="index.html" aria-label="COLection, home">
+        <img src="images/colection-mark.svg" alt="" width="24" height="24">
+        <span>COLection</span>
+      </a>
+      <nav class="foot-nav" aria-label="Footer">
+        <a href="counting.html">How counting works</a>
+        <a href="help.html">Help</a>
+        <a href="changelog.html">What's new</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="terms.html">Terms</a>
+      </nav>
+      <p>Counting elections for any group. Version 0.2.0.</p>
+    </div>
+  </footer>
+  <script src="js/site.js"></script>
+</body>
+</html>

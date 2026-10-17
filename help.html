@@ -36,7 +36,7 @@
       <div class="wrap">
         <h1 id="page-title">Help.</h1>
         <p class="sub">Installing the program, common questions, and what to know before you run a real election.</p>
-        <p class="jump"><a href="#install">Install</a><a href="#faq">Questions</a><a href="#limits">Before you use it</a></p>
+        <p class="jump"><a href="#install">Install</a><a href="#videos">Video guides</a><a href="#faq">Questions</a><a href="#limits">Before you use it</a></p>
       </div>
     </section>
 
@@ -44,16 +44,26 @@
       <div class="wrap install-wrap">
         <div>
           <h2 id="install-title">Install it.</h2>
-          <p class="sub">It is a zip file. A one-click Windows installer is planned.</p>
-          <p class="actions"><a class="btn" href="downloads/COLection-0.2.0.zip" download>Download the zip</a></p>
-          <p class="fine">If the program is not signed, Windows may show a warning the first time. That is expected for new software.</p>
+          <p class="sub">For Windows 10 and 11. One file, no other software needed.</p>
+          <p class="actions"><a class="btn" href="downloads/COLection-Setup-0.2.1.exe" download>Download the installer</a></p>
+          <p class="fine">The first time, Windows may say "Windows protected your PC", because new software is not yet widely recognised. Choose <strong>More info</strong>, then <strong>Run anyway</strong>. Prefer no installer? <a href="downloads/COLection-0.2.1.zip" download>Download the zip</a>, unzip it anywhere and open <code>COLection.exe</code>. To remove COLection, use Windows Settings &gt; Apps: your elections and seating plans are kept.</p>
         </div>
         <ol class="install light">
-          <li><strong>Install Python 3.12 or newer</strong><span>From python.org. On the first screen of the installer, tick "Add python.exe to PATH".</span></li>
-          <li><strong>Unzip the folder</strong><span>Anywhere you like, for example your Documents folder.</span></li>
-          <li><strong>Install the parts it needs, once</strong><span>Open the folder, type <code>cmd</code> in the address bar, press Enter, then run <code>py -m pip install -r requirements.txt</code>.</span></li>
-          <li><strong>Start it</strong><span>In the same window, run <code>py main.py</code>.</span></li>
+          <li><strong>Download the installer</strong><span>It is one file, <code>COLection-Setup-0.2.1.exe</code>.</span></li>
+          <li><strong>Run it</strong><span>Double-click it and follow the steps. It installs for you only, so no administrator password is needed.</span></li>
+          <li><strong>Open COLection</strong><span>Find it in the Start menu. The free version works straight away, with no account.</span></li>
+          <li><strong>Add a licence, if you have one</strong><span>Go to Settings &gt; Licence and paste the line you were sent (or load it from a file).</span></li>
         </ol>
+      </div>
+    </section>
+
+    <section class="videos" id="videos" aria-labelledby="videos-title">
+      <div class="wrap">
+        <h2 id="videos-title">Video guides.</h2>
+        <p class="sub">Short walkthroughs for the parts that are easier to watch than to read. New ones are added as they are made.</p>
+        <div class="tutorials" id="tutorials">
+          <p class="fine">Video guides are on their way. Until then, the questions below cover the common things.</p>
+        </div>
       </div>
     </section>
 
@@ -66,7 +76,10 @@
         <details><summary>What happens if a station freezes or a voter walks away?</summary><p>The desk can take the ballot back and send the voter again. Finished ballots stay safe on the station until a host can take them.</p></details>
         <details><summary>How do I make a seating plan?</summary><p>On the home screen choose New seating plan, pick a template (dinner, wedding, exam hall and more), then add guests on the Guests tab, or import them from a spreadsheet. Use the Wishes tab to say who should sit together or apart, press Auto-arrange, and finish on the Print &amp; share tab.</p></details>
         <details><summary>Can I change the seating after sending it out?</summary><p>Yes. Right-click a guest to cancel them or add a plus-one, and save a snapshot before big changes so you can compare or go back later.</p></details>
-        <details><summary>Does it work on a Mac?</summary><p>The program is written in Python and Qt, so it should run, but it has mainly been built and used on Windows. Treat other systems as untested for now.</p></details>
+        <details><summary>How do I run a vote for thousands of members when I have no voter list?</summary><p>On the Voters tab, tick "Register voters at the desk as they arrive", and type roughly how many members could vote (turnout and quorum are measured against that number). When someone arrives, the person at the desk checks their ID, presses Register a new voter, enters their name and student number or ID, and chooses a free station. The voter types their number again at the station before the ballot opens, and three wrong tries send them back to the desk. Only people who actually vote are kept on the list. You can also load a list as well: anyone not on it is registered on the spot.</p></details>
+        <details><summary>Are voters on their own phones ID-checked too?</summary><p>No. The retyped ID check happens at voting stations. A voter sent to a phone by QR code is not asked for it, so use stations when you want that check.</p></details>
+        <details><summary>How do I enter, copy or remove my licence?</summary><p>Settings &gt; Licence. Paste the line you were sent and press Use this licence. "Copy licence line" lets you keep it somewhere safe, and "Remove this licence" returns the program to the free version on that computer. Pasting the same line in again switches it back on, and it works until its end date. A licence can also be set to start on a later day.</p></details>
+        <details><summary>Does it work on a Mac?</summary><p>Not yet. The installer is for Windows 10 and 11.</p></details>
       </div>
     </section>
 
@@ -78,6 +91,7 @@
           <li class="reveal">It counts the rules you give it. It does not replace your constitution or your returning officer, so check the Rules step against both.</li>
           <li class="reveal">Passwords protect each election folder. Keep the recovery key somewhere safe: without the password or the key, nobody can open it.</li>
           <li class="reveal">The host computer has to stay on and the program open while people vote.</li>
+          <li class="reveal">When voters are registered at the desk, the free limit and your licence limit count the people on the list as it grows, and the desk will be stopped from registering more once it is reached. Choose a licence size for the turnout you expect, not for your whole membership.</li>
         </ul>
       </div>
     </section>
@@ -97,9 +111,11 @@
         <a href="pricing.html">Pricing</a>
         <a href="terms.html">Terms</a>
       </nav>
-      <p>Counting elections for any group. Version 0.2.0.</p>
+      <p>Counting elections for any group. Version 0.2.1.</p>
     </div>
   </footer>
+  <script src="js/tutorials-data.js"></script>
+  <script src="js/tutorials.js"></script>
   <script src="js/site.js"></script>
 </body>
 </html>

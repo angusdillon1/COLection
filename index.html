@@ -85,7 +85,7 @@
     <section class="voting" id="voting" aria-labelledby="voting-title">
       <div class="wrap">
         <h2 id="voting-title">Vote in the room. On phones, or at a station.</h2>
-        <p class="sub">One computer is the host. Voters join from a QR code on their phone, or sit at a voting station that goes full screen and locks until a password is entered. A person at the desk checks who is who and sends each voter to a free station.</p>
+        <p class="sub">One computer is the host. Voters join from a QR code on their phone, or sit at a voting station that goes full screen and locks until a password is entered. A person at the desk checks who is who and sends each voter to a free station. For a big group with no voter list, the desk can register people as they arrive instead.</p>
       </div>
       <div class="wrap voting-shots">
         <figure class="parallax phone" data-speed="-40">
@@ -102,6 +102,7 @@
         <div class="reveal"><dt>Names stay off ballots</dt><dd>A ballot carries no name and no time, and new ballots are placed at a random position, so nobody can work out whose is whose.</dd></div>
         <div class="reveal"><dt>Help without a queue</dt><dd>A voter can tap I need help, and the desk sees which station asked.</dd></div>
         <div class="reveal"><dt>If the host fails</dt><dd>Stations keep finished ballots, and a second computer can take over from a backup folder so no vote is lost.</dd></div>
+        <div class="reveal"><dt>Thousands of members</dt><dd>No voter list? Switch on desk registration: the desk checks ID, enters the voter, and sends them to a station, where they type their number again before voting. Only people who vote are kept.</dd></div>
       </dl>
     </section>
 
@@ -124,7 +125,7 @@
         <div class="reveal"><dt>Wishes you can see</dt><dd>Green guests got their wishes. Orange ones missed some, and lines show exactly who they wanted beside them.</dd></div>
         <div class="reveal"><dt>Suggest a swap</dt><dd>Ask for the swaps that would help the most, and apply them one at a time.</dd></div>
         <div class="reveal"><dt>Late changes</dt><dd>Someone cancels or brings a plus-one? Update the plan without starting again, and compare against an earlier snapshot.</dd></div>
-        <div class="reveal"><dt>Ready to print</dt><dd>Floor plan, lists with meal choices, place cards and lookup sheets, with your own logo and paper size.</dd></div>
+        <div class="reveal"><dt>Ready to print</dt><dd>Floor plan, table lists with meal choices, an A to Z list of every guest with their table, place cards in several styles and lookup sheets, with your own logo and paper size.</dd></div>
       </dl>
     </section>
 
@@ -147,30 +148,30 @@
       <div class="wrap download-grid">
         <div class="reveal">
           <h2 id="download-title">Download COLection.</h2>
-          <p class="sub">Version 0.2.0. It is a zip file: unzip it, and follow the steps beside this. A one-click Windows installer is planned.</p>
+          <p class="sub">Version 0.2.1, for Windows 10 and 11. Download the installer, run it, and COLection appears in your Start menu. Free for up to 50 voters, with every feature.</p>
           <p class="actions">
-            <!-- TODO: put your zip in the downloads folder (or change this link to your GitHub release) -->
-            <a class="btn light" href="downloads/COLection-0.2.0.zip" download>Download the zip</a>
+            <!-- TODO: put COLection-Setup-0.2.1.exe (and the zip) in the downloads folder, or change these links to your release page -->
+            <a class="btn light" href="downloads/COLection-Setup-0.2.1.exe" download>Download the installer</a>
             <a class="textlink" href="help.html">Need a hand? Read the help</a>
           </p>
-          <p class="fine">If the program is not signed, Windows may show a warning the first time. That is expected for new software.</p>
+          <p class="fine">The first time, Windows may say "Windows protected your PC", because new software is not yet widely recognised. Choose <strong>More info</strong>, then <strong>Run anyway</strong>. Prefer no installer? <a href="downloads/COLection-0.2.1.zip" download>Download the zip</a>, unzip it anywhere and open <code>COLection.exe</code>.</p>
         </div>
         <ol class="install reveal">
           <li>
-            <strong>Install Python 3.12 or newer</strong>
-            <span>From python.org. On the first screen of the installer, tick "Add python.exe to PATH".</span>
+            <strong>Download the installer</strong>
+            <span>It is one file, <code>COLection-Setup-0.2.1.exe</code>. Nothing else needs installing first.</span>
           </li>
           <li>
-            <strong>Unzip the folder</strong>
-            <span>Anywhere you like, for example your Documents folder.</span>
+            <strong>Run it</strong>
+            <span>Double-click it and follow the steps. It installs for you only, so no administrator password is needed.</span>
           </li>
           <li>
-            <strong>Install the parts it needs, once</strong>
-            <span>Open the folder, type <code>cmd</code> in the address bar, press Enter, then run <code>py -m pip install -r requirements.txt</code>.</span>
+            <strong>Open COLection</strong>
+            <span>Find it in the Start menu. The free version works straight away, with no account.</span>
           </li>
           <li>
-            <strong>Start it</strong>
-            <span>In the same window, run <code>py main.py</code>.</span>
+            <strong>Add a licence, if you have one</strong>
+            <span>Go to Settings &gt; Licence and paste the line you were sent.</span>
           </li>
         </ol>
       </div>
@@ -190,7 +191,7 @@
         <a href="pricing.html">Pricing</a>
         <a href="terms.html">Terms</a>
       </nav>
-      <p>Counting elections for any group. Version 0.2.0.</p>
+      <p>Counting elections for any group. Version 0.2.1.</p>
     </div>
   </footer>
   <script src="js/site.js"></script>

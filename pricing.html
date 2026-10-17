@@ -120,9 +120,10 @@
         <details><summary>How is the price worked out?</summary><p>It grows with the number of voters, but more slowly than the voters do: a group ten times the size pays about four times as much. Longer licences get a discount for each extra year. The price you see here is the price charged.</p></details>
         <details><summary>What counts as a voter?</summary><p>Anyone on the roll of an election. A licence for 300 voters covers any election with up to 300 people on its roll, as many times as you like while it lasts.</p></details>
         <details><summary>Do seating plans need a licence?</summary><p>The same licence covers them. A guest counts the same as a voter, so a licence for 300 voters also covers seating plans of up to 300 guests. In the free version you can enter any number of guests, but arranging, printing and looking up guests is limited to 40 per plan, and free printouts carry a "made with the free version" line.</p></details>
+        <details><summary>My group is very large, or I do not have a voter list.</summary><p>Over 5,000 voters, <a href="#" id="big-link">ask for a quote</a>. If you have no list at all (a union or a student body with tens of thousands of members), turn on walk-in registration: people are registered at a desk as they arrive, and the licence limit counts the people registered, so you only pay for the people who actually vote.</p></details>
         <details><summary>I need a few more voters than I bought.</summary><p>The program will tell you when an election is over the limit, and you can buy a bigger licence. Email us and we will take what you have paid into account.</p></details>
         <details><summary>Can I use the licence on a different computer?</summary><p>Yes. It is a line of text you paste in on any computer you use for your organisation. It is for your organisation's use, not for sharing with other groups.</p></details>
-        <details><summary>Do you need an invoice or a purchase order?</summary><p>No problem: <a href="#" id="invoice-link">email us</a> with your organisation name, the number of voters and the length you need, and we will send an invoice.</p></details>
+        <details><summary>How do I pay?</summary><p>By bank transfer. Choose your size and length above and press the button: your email program opens with the details filled in. We reply with an invoice (purchase orders are fine), and once the payment arrives we email you the licence. You can also <a href="#" id="invoice-link">email us</a> directly with your organisation name, the number of voters and the length you need, and we will send an invoice.</p></details>
         <details><summary>Can I get a refund?</summary><p>If it does not work for you, tell us within 14 days and we will refund you in full. A refunded licence stops being accepted by updated versions of the program.</p></details>
         <details><summary>Does the program phone home to check the licence?</summary><p>No. The licence is checked on your computer, with no internet needed. Nothing about your elections or voters ever leaves your computer.</p></details>
       </div>
@@ -142,7 +143,7 @@
         <a href="pricing.html">Pricing</a>
         <a href="terms.html">Terms</a>
       </nav>
-      <p>Counting elections for any group. Version 0.2.0.</p>
+      <p>Counting elections for any group. Version 0.2.1.</p>
     </div>
   </footer>
   <script src="js/site-config.js"></script>
@@ -152,8 +153,9 @@
   <script>
     (function () {
       var c = window.COL_SITE || {}, mail = "mailto:" + (c.CONTACT_EMAIL || "");
-      var q = document.getElementById("quote-link"), i = document.getElementById("invoice-link");
+      var q = document.getElementById("quote-link"), i = document.getElementById("invoice-link"), b = document.getElementById("big-link");
       if (q) q.href = mail + "?subject=" + encodeURIComponent("COLection quote");
+      if (b) b.href = mail + "?subject=" + encodeURIComponent("COLection quote, large group");
       if (i) i.href = mail + "?subject=" + encodeURIComponent("COLection invoice request");
     })();
   </script>

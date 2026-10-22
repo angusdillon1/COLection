@@ -7,7 +7,7 @@
    REFUND_DAYS   how many days a buyer has to ask for a refund (used on the Terms page; the Pricing page FAQ says 14, so change both). */
 window.COL_SITE = {
   API_BASE: "",
-  CONTACT_EMAIL: "dillonangus5@gmail.com",
+  CONTACT_EMAIL: "colectionhelp@gmail.com",
   SELLER: "",
   REFUND_DAYS: 14
 };

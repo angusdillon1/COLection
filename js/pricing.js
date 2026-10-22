@@ -16,6 +16,7 @@
     round_to: 5,
     free_voters: 50,
     max_online_voters: 5000,
+    tiers: [100, 250, 500, 1000, 2500, 5000],
     year_factors: { "1": 1.0, "2": 0.9, "3": 0.8 },
     pass: { days: 30, factor: 0.4 }
   };
@@ -30,12 +31,18 @@
     return "";
   }
 
+  /* The licence size that covers `voters`: the smallest tier that is at least that many (the number itself above the last tier). */
+  function tier(voters) {
+    for (var i = 0; i < CONFIG.tiers.length; i++) if (voters <= CONFIG.tiers[i]) return CONFIG.tiers[i];
+    return voters;
+  }
+
   /* Whole dollars for `voters` voters and a term of "1", "2", "3" (years) or "pass". Throws a plain sentence if not allowed. */
   function price(voters, term) {
     term = String(term);
     var why = check(voters, term);
     if (why) throw new RangeError(why);
-    var base = Math.max(CONFIG.minimum, CONFIG.anchor_price * Math.pow(voters / CONFIG.anchor_voters, CONFIG.exponent));
+    var base = Math.max(CONFIG.minimum, CONFIG.anchor_price * Math.pow(tier(voters) / CONFIG.anchor_voters, CONFIG.exponent));
     var total = term === "pass" ? base * CONFIG.pass.factor : base * Number(term) * CONFIG.year_factors[term];
     var step = CONFIG.round_to;
     return Math.max(step, Math.floor(total / step + 0.5) * step);
@@ -57,5 +64,5 @@
     return String(term) === "pass" ? CONFIG.pass.days + "-day pass" : term + " year" + (String(term) === "1" ? "" : "s");
   }
 
-  return { CONFIG: CONFIG, check: check, price: price, expiry: expiry, termName: termName };
+  return { CONFIG: CONFIG, check: check, tier: tier, price: price, expiry: expiry, termName: termName };
 });

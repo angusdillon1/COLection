@@ -14,6 +14,7 @@ test("the website's settings equal tools/pricing.json", () => {
 });
 test("limits are explained in plain words", () => {
   assert.throws(() => pricing.price(50, "1"), /free version/);
+  assert.equal(pricing.tier(51), 100); assert.equal(pricing.tier(251), 500); assert.equal(pricing.tier(5000), 5000);
   assert.throws(() => pricing.price(5001, "1"), /quote/);
   assert.throws(() => pricing.price(100, "9"), /Choose/);
   assert.throws(() => pricing.price(100.5, "1"), /free version|more than/);

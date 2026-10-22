@@ -23,9 +23,9 @@
     </a>
     <nav aria-label="Main">
       <a href="index.html">Overview</a>
+      <a href="how-it-works.html">How it works</a>
       <a href="counting.html">How counting works</a>
       <a href="help.html">Help</a>
-      <a href="changelog.html">What's new</a>
       <a href="pricing.html" aria-current="page">Pricing</a>
       <a class="pill" href="index.html#download">Download</a>
     </nav>
@@ -35,7 +35,7 @@
     <section class="page-hero" aria-labelledby="page-title">
       <div class="wrap">
         <h1 id="page-title">Pricing.</h1>
-        <p class="sub">Free for up to 50 voters. For bigger elections, pay once for the size and length you need, and your licence is emailed to you straight away.</p>
+        <p class="sub">Free for up to 50 voters. For bigger groups, choose a size and a length. You pay once and we email you the licence.</p>
       </div>
     </section>
 
@@ -46,11 +46,17 @@
 
           <div class="field">
             <label for="voters">How many people can vote?</label>
-            <div class="voters-row">
-              <input id="voters" name="voters" inputmode="numeric" autocomplete="off" value="300" aria-describedby="price-note">
-              <input id="voters-range" type="range" min="0" max="1000" value="500" aria-label="Number of voters, slider">
-            </div>
-            <p class="fine">Count everyone on your roll, not just those who usually turn up. A licence covers up to this many voters in each election.</p>
+            <select id="voters" name="voters" aria-describedby="price-note">
+              <option value="50">Up to 50: free</option>
+              <option value="100">Up to 100</option>
+              <option value="250">Up to 250</option>
+              <option value="500" selected>Up to 500</option>
+              <option value="1000">Up to 1,000</option>
+              <option value="2500">Up to 2,500</option>
+              <option value="5000">Up to 5,000</option>
+              <option value="5001">More than 5,000: ask for a quote</option>
+            </select>
+            <p class="fine">Choose the size that covers everyone on your roll. A licence covers every election you run, up to that many voters in each.</p>
           </div>
 
           <fieldset class="field terms">
@@ -88,7 +94,7 @@
           <h2 class="aside-title">What you get</h2>
           <ul class="ticks">
             <li>No limit on how many elections you run while the licence is valid.</li>
-            <li>Your licence arrives by email within a few minutes. Paste it into Settings &gt; Licence. It works without internet.</li>
+            <li>We email you the licence. Paste it into Settings &gt; Licence. It works without internet.</li>
             <li>Reports lose the "made with the free version" line.</li>
             <li>One licence covers every computer you use for your election, including voting stations and a computer that takes over.</li>
           </ul>
@@ -103,23 +109,23 @@
 
     <section class="examples" aria-labelledby="examples-title">
       <div class="wrap">
-        <h2 id="examples-title">Some examples.</h2>
+        <h2 id="examples-title">All the sizes.</h2>
         <div class="table-scroll">
           <table>
             <thead><tr><th scope="col">Voters</th><th scope="col">30-day pass</th><th scope="col">1 year</th><th scope="col">2 years</th><th scope="col">3 years</th></tr></thead>
             <tbody id="examples"></tbody>
           </table>
         </div>
-        <p class="fine">Prices in Australian dollars. Bigger groups pay more in total but less per voter. Over 5,000 voters, or if you need a purchase order, <a href="#" id="quote-link">ask for a quote</a>.</p>
+        <p class="fine">Prices in Australian dollars. Over 5,000 voters, or if you need a purchase order, <a href="#" id="quote-link">ask for a quote</a>.</p>
       </div>
     </section>
 
     <section class="faq" aria-labelledby="faq-title">
       <div class="wrap">
         <h2 id="faq-title">Questions.</h2>
-        <details><summary>How is the price worked out?</summary><p>It grows with the number of voters, but more slowly than the voters do: a group ten times the size pays about four times as much. Longer licences get a discount for each extra year. The price you see here is the price charged.</p></details>
-        <details><summary>What counts as a voter?</summary><p>Anyone on the roll of an election. A licence for 300 voters covers any election with up to 300 people on its roll, as many times as you like while it lasts.</p></details>
-        <details><summary>Do seating plans need a licence?</summary><p>The same licence covers them. A guest counts the same as a voter, so a licence for 300 voters also covers seating plans of up to 300 guests. In the free version you can enter any number of guests, but arranging, printing and looking up guests is limited to 40 per plan, and free printouts carry a "made with the free version" line.</p></details>
+        <details><summary>How is the price worked out?</summary><p>By the size of your group: a bigger group pays more in total but less per voter. Longer licences get a discount for each extra year. The price you see here is the price you pay.</p></details>
+        <details><summary>What counts as a voter?</summary><p>Anyone on the roll of an election. A licence for up to 500 voters covers any election with up to 500 people on its roll, as many times as you like while it lasts.</p></details>
+        <details><summary>Do seating plans need a licence?</summary><p>The same licence covers them. A guest counts the same as a voter, so a licence for up to 500 voters also covers seating plans of up to 500 guests. In the free version you can enter any number of guests, but arranging, printing and looking up guests is limited to 40 per plan, and free printouts carry a "made with the free version" line.</p></details>
         <details><summary>My group is very large, or I do not have a voter list.</summary><p>Over 5,000 voters, <a href="#" id="big-link">ask for a quote</a>. If you have no list at all (a union or a student body with tens of thousands of members), turn on walk-in registration: people are registered at a desk as they arrive, and the licence limit counts the people registered, so you only pay for the people who actually vote.</p></details>
         <details><summary>I need a few more voters than I bought.</summary><p>The program will tell you when an election is over the limit, and you can buy a bigger licence. Email us and we will take what you have paid into account.</p></details>
         <details><summary>Can I use the licence on a different computer?</summary><p>Yes. It is a line of text you paste in on any computer you use for your organisation. It is for your organisation's use, not for sharing with other groups.</p></details>
@@ -137,13 +143,14 @@
         <span>COLection</span>
       </a>
       <nav class="foot-nav" aria-label="Footer">
+        <a href="how-it-works.html">How it works</a>
         <a href="counting.html">How counting works</a>
         <a href="help.html">Help</a>
         <a href="changelog.html">What's new</a>
         <a href="pricing.html">Pricing</a>
         <a href="terms.html">Terms</a>
       </nav>
-      <p>Counting elections for any group. Version 0.2.1.</p>
+      <p>Counting elections for any group. Version 0.2.2.</p>
     </div>
   </footer>
   <script src="js/site-config.js"></script>

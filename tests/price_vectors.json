@@ -9,6 +9,14 @@
   "round_to": 5,
   "free_voters": 50,
   "max_online_voters": 5000,
+  "tiers": [
+   100,
+   250,
+   500,
+   1000,
+   2500,
+   5000
+  ],
   "year_factors": {
    "1": 1.0,
    "2": 0.9,
@@ -23,62 +31,82 @@
   {
    "voters": 51,
    "term": "1",
-   "price": 60
+   "price": 90
   },
   {
    "voters": 51,
    "term": "2",
-   "price": 110
+   "price": 160
   },
   {
    "voters": 51,
    "term": "3",
-   "price": 145
+   "price": 215
   },
   {
    "voters": 51,
    "term": "pass",
-   "price": 25
+   "price": 35
   },
   {
    "voters": 60,
    "term": "1",
-   "price": 65
+   "price": 90
   },
   {
    "voters": 60,
    "term": "2",
-   "price": 120
-  },
-  {
-   "voters": 60,
-   "term": "3",
    "price": 160
   },
   {
    "voters": 60,
+   "term": "3",
+   "price": 215
+  },
+  {
+   "voters": 60,
    "term": "pass",
-   "price": 25
+   "price": 35
   },
   {
    "voters": 75,
    "term": "1",
-   "price": 75
+   "price": 90
   },
   {
    "voters": 75,
    "term": "2",
-   "price": 135
+   "price": 160
   },
   {
    "voters": 75,
    "term": "3",
-   "price": 180
+   "price": 215
   },
   {
    "voters": 75,
    "term": "pass",
-   "price": 30
+   "price": 35
+  },
+  {
+   "voters": 99,
+   "term": "1",
+   "price": 90
+  },
+  {
+   "voters": 99,
+   "term": "2",
+   "price": 160
+  },
+  {
+   "voters": 99,
+   "term": "3",
+   "price": 215
+  },
+  {
+   "voters": 99,
+   "term": "pass",
+   "price": 35
   },
   {
    "voters": 100,
@@ -101,64 +129,84 @@
    "price": 35
   },
   {
+   "voters": 101,
+   "term": "1",
+   "price": 155
+  },
+  {
+   "voters": 101,
+   "term": "2",
+   "price": 280
+  },
+  {
+   "voters": 101,
+   "term": "3",
+   "price": 375
+  },
+  {
+   "voters": 101,
+   "term": "pass",
+   "price": 60
+  },
+  {
    "voters": 120,
    "term": "1",
-   "price": 100
+   "price": 155
   },
   {
    "voters": 120,
    "term": "2",
-   "price": 180
+   "price": 280
   },
   {
    "voters": 120,
    "term": "3",
-   "price": 240
+   "price": 375
   },
   {
    "voters": 120,
    "term": "pass",
-   "price": 40
+   "price": 60
   },
   {
    "voters": 150,
    "term": "1",
-   "price": 115
+   "price": 155
   },
   {
    "voters": 150,
    "term": "2",
-   "price": 205
+   "price": 280
   },
   {
    "voters": 150,
    "term": "3",
-   "price": 275
+   "price": 375
   },
   {
    "voters": 150,
    "term": "pass",
-   "price": 45
+   "price": 60
   },
   {
    "voters": 200,
    "term": "1",
-   "price": 135
+   "price": 155
   },
   {
    "voters": 200,
    "term": "2",
-   "price": 245
+   "price": 280
   },
   {
    "voters": 200,
    "term": "3",
-   "price": 325
+   "price": 375
   },
   {
    "voters": 200,
    "term": "pass",
-   "price": 55
+   "price": 60
   },
   {
    "voters": 250,
@@ -181,44 +229,64 @@
    "price": 60
   },
   {
+   "voters": 251,
+   "term": "1",
+   "price": 235
+  },
+  {
+   "voters": 251,
+   "term": "2",
+   "price": 425
+  },
+  {
+   "voters": 251,
+   "term": "3",
+   "price": 565
+  },
+  {
+   "voters": 251,
+   "term": "pass",
+   "price": 95
+  },
+  {
    "voters": 300,
    "term": "1",
-   "price": 175
+   "price": 235
   },
   {
    "voters": 300,
    "term": "2",
-   "price": 315
+   "price": 425
   },
   {
    "voters": 300,
    "term": "3",
-   "price": 420
+   "price": 565
   },
   {
    "voters": 300,
    "term": "pass",
-   "price": 70
+   "price": 95
   },
   {
    "voters": 400,
    "term": "1",
-   "price": 205
+   "price": 235
   },
   {
    "voters": 400,
    "term": "2",
-   "price": 370
+   "price": 425
   },
   {
    "voters": 400,
    "term": "3",
-   "price": 495
+   "price": 565
   },
   {
    "voters": 400,
    "term": "pass",
-   "price": 85
+   "price": 95
   },
   {
    "voters": 500,
@@ -241,24 +309,44 @@
    "price": 95
   },
   {
+   "voters": 501,
+   "term": "1",
+   "price": 360
+  },
+  {
+   "voters": 501,
+   "term": "2",
+   "price": 645
+  },
+  {
+   "voters": 501,
+   "term": "3",
+   "price": 860
+  },
+  {
+   "voters": 501,
+   "term": "pass",
+   "price": 145
+  },
+  {
    "voters": 750,
    "term": "1",
-   "price": 300
+   "price": 360
   },
   {
    "voters": 750,
    "term": "2",
-   "price": 545
+   "price": 645
   },
   {
    "voters": 750,
    "term": "3",
-   "price": 725
+   "price": 860
   },
   {
    "voters": 750,
    "term": "pass",
-   "price": 120
+   "price": 145
   },
   {
    "voters": 1000,
@@ -281,24 +369,44 @@
    "price": 145
   },
   {
+   "voters": 1001,
+   "term": "1",
+   "price": 620
+  },
+  {
+   "voters": 1001,
+   "term": "2",
+   "price": 1120
+  },
+  {
+   "voters": 1001,
+   "term": "3",
+   "price": 1490
+  },
+  {
+   "voters": 1001,
+   "term": "pass",
+   "price": 250
+  },
+  {
    "voters": 1500,
    "term": "1",
-   "price": 455
+   "price": 620
   },
   {
    "voters": 1500,
    "term": "2",
-   "price": 825
+   "price": 1120
   },
   {
    "voters": 1500,
    "term": "3",
-   "price": 1095
+   "price": 1490
   },
   {
    "voters": 1500,
    "term": "pass",
-   "price": 185
+   "price": 250
   },
   {
    "voters": 2500,
@@ -321,24 +429,44 @@
    "price": 250
   },
   {
+   "voters": 2501,
+   "term": "1",
+   "price": 940
+  },
+  {
+   "voters": 2501,
+   "term": "2",
+   "price": 1695
+  },
+  {
+   "voters": 2501,
+   "term": "3",
+   "price": 2260
+  },
+  {
+   "voters": 2501,
+   "term": "pass",
+   "price": 375
+  },
+  {
    "voters": 4000,
    "term": "1",
-   "price": 825
+   "price": 940
   },
   {
    "voters": 4000,
    "term": "2",
-   "price": 1480
+   "price": 1695
   },
   {
    "voters": 4000,
    "term": "3",
-   "price": 1975
+   "price": 2260
   },
   {
    "voters": 4000,
    "term": "pass",
-   "price": 330
+   "price": 375
   },
   {
    "voters": 5000,

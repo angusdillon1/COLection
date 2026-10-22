@@ -23,157 +23,96 @@
     </a>
     <nav aria-label="Main">
       <a href="index.html" aria-current="page">Overview</a>
+      <a href="how-it-works.html">How it works</a>
       <a href="counting.html">How counting works</a>
       <a href="help.html">Help</a>
-      <a href="changelog.html">What's new</a>
       <a href="pricing.html">Pricing</a>
       <a class="pill" href="index.html#download">Download</a>
     </nav>
   </header>
 
   <main id="main">
-    <section class="hero-track" id="top" data-theme="dark" aria-label="COLection">
-      <div class="hero-stage" id="hero-stage">
-        <div class="hero-copy" id="hero-copy">
+    <section class="home-hero" data-theme="dark" aria-label="COLection">
+      <div class="wrap home-hero-grid">
+        <div class="home-hero-copy">
           <h1>Count any election.</h1>
-          <p class="lead">Every round, every ballot, and a record anyone can check.</p>
+          <p class="lead">COLection runs the vote, counts it, and shows every step, so anyone can check the result.</p>
           <p class="actions">
-            <a class="btn light" href="#download">Download COLection</a>
-            <a class="textlink" href="#steps">See how an election runs</a>
+            <a class="btn light" href="#download">Download for Windows</a>
+            <a class="textlink" href="how-it-works.html">See how it works</a>
           </p>
+          <p class="fine">Free for up to 50 voters. No account needed.</p>
         </div>
-        <svg class="rings" id="rings" viewBox="-6 -6 112 112" aria-hidden="true" focusable="false">
-          <g id="ring-all" fill="none" stroke-width="8" stroke-linecap="round">
-            <path id="ring-a" d="M80.6 24.3 A40 40 0 1 0 80.6 75.7" stroke="#2c5aa6"/>
-            <path id="ring-b" d="M70.7 32.6 A27 27 0 1 0 70.7 67.4" stroke="#1f9d55"/>
-            <path id="ring-c" d="M60.7 41 A14 14 0 1 0 60.7 59" stroke="#f5ac0b"/>
+        <svg class="home-rings" viewBox="-6 -6 112 112" aria-hidden="true" focusable="false">
+          <g fill="none" stroke-width="8" stroke-linecap="round">
+            <path d="M80.6 24.3 A40 40 0 1 0 80.6 75.7" stroke="#2c5aa6"/>
+            <path d="M70.7 32.6 A27 27 0 1 0 70.7 67.4" stroke="#1f9d55"/>
+            <path d="M60.7 41 A14 14 0 1 0 60.7 59" stroke="#f5ac0b"/>
           </g>
-          <circle id="ring-dot" cx="50" cy="50" r="4.5" fill="#1f9d55"/>
+          <circle cx="50" cy="50" r="4.5" fill="#1f9d55"/>
         </svg>
-        <p class="hero-line" id="hero-line" aria-hidden="true">Every round. Every ballot.<br>All in the open.</p>
-        <p class="scroll-cue" id="scroll-cue" aria-hidden="true">Scroll</p>
       </div>
     </section>
 
-    <section class="statement" aria-label="What it does">
-      <p class="words" id="words">COLection counts preferential and multi-seat elections, runs the vote on phones and voting stations, and keeps a record so anyone can check how the result came about. It runs on your own computer, and needs no internet while people vote.</p>
-    </section>
-
-    <section class="steps-track" id="steps" aria-labelledby="steps-title">
-      <div class="steps-stage">
-        <div class="steps-text">
-          <h2 id="steps-title">Five steps. Same order every time.</h2>
-          <p class="sub">Each election lives in its own folder with its own password. Each step tells you when it is ready.</p>
-          <ol class="step-list" id="step-list">
-            <li class="on" data-i="0"><h3>Rules</h3><p>Say who is being elected and how: single roles, committees, groups with limits, tie rules. Start from a template or build your own.</p></li>
-            <li data-i="1"><h3>Collect votes</h3><p>Import answers from Google Forms, or run the vote in person on phones and voting stations.</p></li>
-            <li data-i="2"><h3>Check</h3><p>Before anything is counted, the program checks that the rules and the people standing fit together, and tells you plainly if they do not.</p></li>
-            <li data-i="3"><h3>Count and results</h3><p>Count, settle any ties, then read the winners, the round-by-round tallies and the vote flow.</p></li>
-            <li data-i="4"><h3>Export results</h3><p>Choose what goes in the printed report, watch the PDF update as you tick things, then save it, print it or sign it off.</p></li>
-          </ol>
-        </div>
-        <div class="steps-shots" id="step-shots">
-          <figure class="frame on"><div class="win"><div class="win-bar" aria-hidden="true"><i></i><i></i><i></i></div><img src="images/app-rules.png" width="1280" height="774" alt="The Rules step: a table listing six positions, how each is counted, and who can stand and vote."></div></figure>
-          <figure class="frame"><div class="win"><div class="win-bar" aria-hidden="true"><i></i><i></i><i></i></div><img src="images/app-ballot.png" width="1180" height="760" alt="The voting station ballot in drag to order mode with four names ranked." loading="lazy"></div></figure>
-          <figure class="frame"><div class="win"><div class="win-bar" aria-hidden="true"><i></i><i></i><i></i></div><img src="images/app-check.png" width="1280" height="774" alt="The Check step: what was found, and a note that some seats will stay vacant." loading="lazy"></div></figure>
-          <figure class="frame"><div class="win"><div class="win-bar" aria-hidden="true"><i></i><i></i><i></i></div><img src="images/app-count.png" width="1280" height="774" alt="The Count and results step: cards showing 214 ballots counted, 10 candidates and 6 positions above the list of winners." loading="lazy"></div></figure>
-          <figure class="frame"><div class="win"><div class="win-bar" aria-hidden="true"><i></i><i></i><i></i></div><img src="images/app-export.png" width="1280" height="774" alt="The Export results step: tick boxes for what goes in the report, and a page-by-page PDF preview with zoom buttons." loading="lazy"></div></figure>
-        </div>
-      </div>
-    </section>
-
-    <section class="voting" id="voting" aria-labelledby="voting-title">
+    <section class="what" id="what" aria-labelledby="what-title">
       <div class="wrap">
-        <h2 id="voting-title">Vote in the room. On phones, or at a station.</h2>
-        <p class="sub">One computer is the host. Voters join from a QR code on their phone, or sit at a voting station that goes full screen and locks until a password is entered. A person at the desk checks who is who and sends each voter to a free station. For a big group with no voter list, the desk can register people as they arrive instead.</p>
-      </div>
-      <div class="wrap voting-shots">
-        <figure class="parallax phone" data-speed="-40">
-          <img src="images/app-phone.png" width="600" height="1010" alt="The phone ballot in drag to order mode, with three names ranked, a dashed minimum line, a red end of my list line and a dashed maximum line." loading="lazy">
-          <figcaption>On a phone</figcaption>
-        </figure>
-        <figure class="parallax station" data-speed="30">
-          <div class="win"><div class="win-bar" aria-hidden="true"><i></i><i></i><i></i></div><img src="images/app-ballot.png" width="1180" height="760" alt="The voting station ballot in drag to order mode with four names ranked and the same lines." loading="lazy"></div>
-          <figcaption>On a voting station</figcaption>
-        </figure>
-      </div>
-      <dl class="wrap facts">
-        <div class="reveal"><dt>Two ways to rank</dt><dd>Voters can number their choices, or drag names into order. Lines show the fewest and most preferences that count, and a red line marks where their list ends.</dd></div>
-        <div class="reveal"><dt>Names stay off ballots</dt><dd>A ballot carries no name and no time, and new ballots are placed at a random position, so nobody can work out whose is whose.</dd></div>
-        <div class="reveal"><dt>Help without a queue</dt><dd>A voter can tap I need help, and the desk sees which station asked.</dd></div>
-        <div class="reveal"><dt>If the host fails</dt><dd>Stations keep finished ballots, and a second computer can take over from a backup folder so no vote is lost.</dd></div>
-        <div class="reveal"><dt>Thousands of members</dt><dd>No voter list? Switch on desk registration: the desk checks ID, enters the voter, and sends them to a station, where they type their number again before voting. Only people who vote are kept.</dd></div>
-      </dl>
-    </section>
-
-    <section class="results" id="results" aria-labelledby="results-title">
-      <div class="wrap">
-        <h2 id="results-title">Results that can be checked, not just trusted.</h2>
-        <p class="sub">Choose what goes in the report and watch the PDF update as you tick things. Zoom in and out, make the text bigger or smaller, then save it or print it.</p>
-        <p class="actions"><a class="btn" href="counting.html">See how counting works</a></p>
-      </div>
-      <figure class="grow" id="grow"><div class="win"><div class="win-bar" aria-hidden="true"><i></i><i></i><i></i></div><img src="images/app-export.png" width="1280" height="774" alt="The Export results step: tick boxes for what goes in the report on the left, and a page-by-page preview of the PDF on the right with zoom buttons above it." loading="lazy"></div></figure>
-    </section>
-
-    <section class="results" id="seating" aria-labelledby="seating-title">
-      <div class="wrap">
-        <h2 id="seating-title">Seating plans, too.</h2>
-        <p class="sub">Draw your room, add tables, and let COLection seat everyone. Tell it who must sit together and who should be kept apart, and it finds an arrangement that keeps as many wishes as it can. Then print the floor plan, table lists, place cards and a find-your-seat sheet.</p>
-      </div>
-      <figure class="grow"><div class="win"><div class="win-bar" aria-hidden="true"><i></i><i></i><i></i></div><img src="images/app-seating.png" width="1280" height="800" alt="A floor plan of a dinner room with round tables. Guests are coloured dots, and lines show who wanted to sit together." loading="lazy"></div></figure>
-      <dl class="wrap facts">
-        <div class="reveal"><dt>Wishes you can see</dt><dd>Green guests got their wishes. Orange ones missed some, and lines show exactly who they wanted beside them.</dd></div>
-        <div class="reveal"><dt>Suggest a swap</dt><dd>Ask for the swaps that would help the most, and apply them one at a time.</dd></div>
-        <div class="reveal"><dt>Late changes</dt><dd>Someone cancels or brings a plus-one? Update the plan without starting again, and compare against an earlier snapshot.</dd></div>
-        <div class="reveal"><dt>Ready to print</dt><dd>Floor plan, table lists with meal choices, an A to Z list of every guest with their table, place cards in several styles and lookup sheets, with your own logo and paper size.</dd></div>
-      </dl>
-    </section>
-
-    <section class="templates" id="templates" aria-labelledby="templates-title">
-      <div class="wrap templates-grid">
-        <div class="reveal">
-          <h2 id="templates-title">Start from a template. Keep your own.</h2>
-          <p>The library has ready-made setups for university unions, residential colleges, schools, clubs, community groups, awards nights and yes or no motions. Type a few words to find one, such as "uni", "school" or "club".</p>
-          <p>Built an election you will run again next year? Save its rules as your own template, and send the file to another group so they can use it too. Only the rules are saved, never candidates, voters or votes.</p>
-          <p class="fine">Templates are starting points. Check them against your own constitution before you rely on them.</p>
+        <h2 id="what-title">What it does.</h2>
+        <div class="what-grid">
+          <article class="what-card reveal">
+            <img src="images/app-ballot.png" width="1180" height="760" alt="A voting station showing four names ranked in order.">
+            <h3>Run the vote</h3>
+            <p>Voters use a phone or a voting station in the room. A person at the desk sends each voter a ballot. It works without internet.</p>
+          </article>
+          <article class="what-card reveal">
+            <img src="images/app-count.png" width="1280" height="774" alt="The results screen, with the winners listed.">
+            <h3>Count it</h3>
+            <p>Handles ranked votes, several seats and limits on groups. Every round is shown, so the result can be checked.</p>
+          </article>
+          <article class="what-card reveal">
+            <img src="images/app-seating.png" width="1280" height="800" alt="A floor plan of a dinner with round tables and guests.">
+            <h3>Seat the room</h3>
+            <p>Plan the tables for a dinner or event, keep people together or apart, and print place cards.</p>
+          </article>
         </div>
-        <figure class="shot reveal">
-          <img src="images/app-templates.png" width="790" height="760" alt="The New election window with a search box, a list of school templates and a description of the selected one." loading="lazy">
-          <figcaption>Searching the template library</figcaption>
-        </figure>
+        <p class="actions centre"><a class="textlink" href="how-it-works.html">See how it works, step by step</a></p>
+      </div>
+    </section>
+
+    <section class="who" aria-label="Who it is for">
+      <div class="wrap">
+        <p class="who-line">Made for colleges, student unions, clubs, schools and community groups.</p>
+      </div>
+    </section>
+
+    <section class="band" id="price-band" aria-labelledby="price-title">
+      <div class="wrap band-grid">
+        <div>
+          <h2 id="price-title">Free to start.</h2>
+          <p>Free for up to 50 voters, with every feature. For bigger groups, licences start from A$90 a year, and you pay once.</p>
+        </div>
+        <p class="actions"><a class="btn" href="pricing.html">See pricing</a></p>
+      </div>
+    </section>
+
+    <section class="band alt" id="custom" aria-labelledby="custom-title">
+      <div class="wrap band-grid">
+        <div>
+          <h2 id="custom-title">Need something specific?</h2>
+          <p>COLection can be adapted to your group's own rules, reports or events. Tell us what you need and we will tell you what is possible.</p>
+        </div>
+        <p class="actions"><a class="btn" href="#" id="custom-link">Talk to us</a></p>
       </div>
     </section>
 
     <section class="download" id="download" data-theme="dark" aria-labelledby="download-title">
-      <div class="wrap download-grid">
-        <div class="reveal">
-          <h2 id="download-title">Download COLection.</h2>
-          <p class="sub">Version 0.2.1, for Windows 10 and 11. Download the installer, run it, and COLection appears in your Start menu. Free for up to 50 voters, with every feature.</p>
-          <p class="actions">
-            <!-- Download links point at the GitHub release v0.2.1. For a new version, upload to a new release (tag v0.2.1, v0.2.2 and so on) and change the version in these links. -->
-            <a class="btn light" href="https://github.com/angusdillon1/COLection/releases/download/v0.2.1/COLection-Setup-0.2.1.exe">Download the installer</a>
-            <a class="textlink" href="help.html">Need a hand? Read the help</a>
-          </p>
-          <p class="fine">The first time, Windows may say "Windows protected your PC", because new software is not yet widely recognised. Choose <strong>More info</strong>, then <strong>Run anyway</strong>. Prefer no installer? <a href="https://github.com/angusdillon1/COLection/releases/download/v0.2.1/COLection-0.2.1.zip">Download the zip</a>, unzip it anywhere and open <code>COLection.exe</code>.</p>
-        </div>
-        <ol class="install reveal">
-          <li>
-            <strong>Download the installer</strong>
-            <span>It is one file, <code>COLection-Setup-0.2.1.exe</code>. Nothing else needs installing first.</span>
-          </li>
-          <li>
-            <strong>Run it</strong>
-            <span>Double-click it and follow the steps. It installs for you only, so no administrator password is needed.</span>
-          </li>
-          <li>
-            <strong>Open COLection</strong>
-            <span>Find it in the Start menu. The free version works straight away, with no account.</span>
-          </li>
-          <li>
-            <strong>Add a licence, if you have one</strong>
-            <span>Go to Settings &gt; Licence and paste the line you were sent.</span>
-          </li>
-        </ol>
+      <div class="wrap download-simple">
+        <h2 id="download-title">Download COLection.</h2>
+        <p class="sub">Version 0.2.2 for Windows 10 and 11. Free for up to 50 voters.</p>
+        <p class="actions">
+          <!-- Download links point at the GitHub release v0.2.2. For a new version, upload to a new release (tag v0.2.3 and so on) and change the version in these links. -->
+          <a class="btn light" href="https://github.com/angusdillon1/COLection/releases/download/v0.2.2/COLection-Setup-0.2.2.exe">Download the installer</a>
+        </p>
+        <p class="fine">Windows may warn you the first time, because the program is new. Choose <strong>More info</strong>, then <strong>Run anyway</strong>. <a href="help.html#install">Installation help</a> &middot; <a href="https://github.com/angusdillon1/COLection/releases/download/v0.2.2/COLection-0.2.2.zip">Download as a zip instead</a></p>
       </div>
     </section>
   </main>
@@ -185,15 +124,18 @@
         <span>COLection</span>
       </a>
       <nav class="foot-nav" aria-label="Footer">
+        <a href="how-it-works.html">How it works</a>
         <a href="counting.html">How counting works</a>
         <a href="help.html">Help</a>
         <a href="changelog.html">What's new</a>
         <a href="pricing.html">Pricing</a>
         <a href="terms.html">Terms</a>
       </nav>
-      <p>Counting elections for any group. Version 0.2.1.</p>
+      <p>Counting elections for any group. Version 0.2.2.</p>
     </div>
   </footer>
+  <script src="js/site-config.js"></script>
   <script src="js/site.js"></script>
+  <script>(function(){var c=window.COL_SITE||{},a=document.getElementById("custom-link");if(a)a.href="mailto:"+(c.CONTACT_EMAIL||"")+"?subject="+encodeURIComponent("COLection: something specific");})();</script>
 </body>
 </html>

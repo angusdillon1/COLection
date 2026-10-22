@@ -5,7 +5,7 @@
   if (!form || !P) return;
 
   var $ = function (id) { return document.getElementById(id); };
-  var voters = $("voters"), slider = $("voters-range"), org = $("org"), email = $("email");
+  var voters = $("voters"), org = $("org"), email = $("email");
   var priceEl = $("price"), detail = $("price-detail"), note = $("price-note"), buy = $("buy-button"), msg = $("buy-message");
   var terms = [].slice.call(form.querySelectorAll('input[name="term"]'));
   var MIN = P.CONFIG.free_voters + 1, MAX = P.CONFIG.max_online_voters;
@@ -14,24 +14,14 @@
   function term() { var t = terms.filter(function (r) { return r.checked; })[0]; return t ? t.value : "1"; }
   function money(n) { return "A$" + n.toLocaleString("en-AU"); }
 
-  /* The slider is on a log scale so that 60 and 4000 are both easy to reach. */
-  function fromSlider() {
-    var t = Number(slider.value) / 1000, v = MIN * Math.pow(MAX / MIN, t);
-    var step = v < 200 ? 5 : v < 1000 ? 25 : 100;
-    return Math.min(MAX, Math.max(MIN, Math.round(v / step) * step));
-  }
-  function toSlider(v) { return Math.round(1000 * Math.log(v / MIN) / Math.log(MAX / MIN)); }
-
   function readVoters() {
-    var raw = voters.value.trim();
+    var raw = String(voters.value).trim();
     return /^\d+$/.test(raw) ? Number(raw) : NaN;
   }
 
   function update(source) {
-    if (source === "slider") voters.value = fromSlider();
     var n = readVoters(), t = term(), why = Number.isNaN(n) ? "Enter how many people will be able to vote." : P.check(n, t);
     voters.setAttribute("aria-invalid", why ? "true" : "false");
-    if (!why && source !== "slider") slider.value = toSlider(n);
     var tooMany = !Number.isNaN(n) && n > MAX;
     if (why) {
       priceEl.textContent = "-";
@@ -49,7 +39,7 @@
     priceEl.textContent = money(cost);
     var years = t === "pass" ? null : Number(t);
     detail.textContent = (t === "pass" ? P.CONFIG.pass.days + " days, for a single election" : years + (years === 1 ? " year" : " years")) +
-      ", up to " + n.toLocaleString("en-AU") + " voters" +
+      ", up to " + P.tier(n).toLocaleString("en-AU") + " voters" +
       (years > 1 ? " (" + money(Math.round(cost / years)) + " a year)" : "");
     note.textContent = "One payment, no subscription: it simply ends, and the program keeps working in free mode.";
     buy.textContent = online ? "Pay " + money(cost) + " and get my licence" : "Request an invoice for " + money(cost);
@@ -74,7 +64,7 @@
     if (!$("agree").checked) { show("Please tick the box to say you have read the terms.", true); $("agree").focus(); return; }
     if (!online) {
       window.location.href = mailto("COLection licence: " + org.value.trim(),
-        "Please send me an invoice.\n\nOrganisation: " + org.value.trim() + "\nVoters: up to " + n + "\nTerm: " + P.termName(t) +
+        "Please send me an invoice.\n\nOrganisation: " + org.value.trim() + "\nVoters: up to " + P.tier(n) + "\nTerm: " + P.termName(t) +
         "\nPrice: " + money(P.price(n, t)) + "\nSend the licence to: " + email.value.trim() + "\n");
       show("Your email program should have opened with the details filled in. Send it and I'll reply with an invoice.", false);
       return;
@@ -95,21 +85,23 @@
       });
   });
 
-  slider.addEventListener("input", function () { update("slider"); });
-  voters.addEventListener("input", function () { update("number"); });
+  voters.addEventListener("change", function () { update(); });
   terms.forEach(function (r) { r.addEventListener("change", function () { update(); }); });
   [org, email].forEach(function (el) { el.addEventListener("input", function () { show("", false); }); });
 
   var params = new URLSearchParams(window.location.search);
   if (params.get("cancelled")) show("The payment was cancelled and nothing was charged. You can pick up where you left off.", false);
-  if (params.get("voters") && /^\d+$/.test(params.get("voters"))) voters.value = params.get("voters");
+  if (params.get("voters") && /^\d+$/.test(params.get("voters"))) {          // (a link with a size in it: use the size that covers it)
+    var asked = Number(params.get("voters"));
+    voters.value = asked <= P.CONFIG.free_voters ? "50" : asked > MAX ? "5001" : String(P.tier(asked));
+  }
   if (["1", "2", "3", "pass"].indexOf(params.get("term")) >= 0) terms.forEach(function (r) { r.checked = r.value === params.get("term"); });
   update();
 
   /* the table of examples */
   var table = document.getElementById("examples");
   if (table) {
-    [60, 100, 150, 250, 500, 1000, 2500, 5000].forEach(function (v) {
+    P.CONFIG.tiers.forEach(function (v) {
       var row = document.createElement("tr"), th = document.createElement("th");
       th.scope = "row"; th.textContent = "Up to " + v.toLocaleString("en-AU");
       row.appendChild(th);

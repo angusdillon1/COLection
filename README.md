@@ -32,14 +32,14 @@ colection-site/
 
 ## Things to do before it goes public
 
-- [ ] Put the installer (`COLection-Setup-0.2.2.exe`) and the zip (`COLection-0.2.2.zip`) in `downloads/`, or on a GitHub Release (single files over 100 MB can't go on GitHub Pages), and check the two links in `index.html` (search for `TODO`).
+- [ ] Put the installer (`COLection-Setup-0.2.3.exe`) and the zip (`COLection-0.2.3.zip`) in `downloads/`, or on a GitHub Release (single files over 100 MB can't go on GitHub Pages), and check the two links in `index.html` (search for `TODO`).
 - [ ] Fill in `SELLER` (your name or business, and ABN) in `js/site-config.js` for the Terms page, and have the Terms and the refund wording checked before taking payments.
 - [ ] Video guides: edit `js/tutorials-data.js` (see the notes at the top of it); video files go in `videos/`.
 - [ ] Add a way to contact you (for example a "Report a problem" link in the footer).
 - [ ] Check you are allowed to name any college or show its logo. The screenshots use a made-up "Example College" with made-up names.
 - [ ] Replace the screenshots with your own if you like. app-count, app-export and app-rounds show the new Qt program (made on Linux, so fonts differ slightly from Windows); app-ballot, app-phone and app-templates are still from the older look. Keep the file names, or edit the `<img>` tags.
 - [ ] Check the claims in "What to know before you use it" still match the program.
-- [ ] When you release a new version, change the version number (search `0.2.2` (the current number) in every .html file) and add an entry to `changelog.html`.
+- [ ] When you release a new version, change the version number (search `0.2.3` (the current number) in every .html file) and add an entry to `changelog.html`.
 
 ## Publish it for free
 

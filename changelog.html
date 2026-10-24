@@ -42,14 +42,35 @@
     <section class="log" aria-label="Versions">
       <div class="wrap">
         <article class="release reveal">
+          <header><h2>0.2.3</h2><p class="when">October 2026</p></header>
+          <div>
+            <h3>Vote from anywhere</h3>
+            <ul>
+              <li>Online voting needs a COLection account, and the COLection website that runs it is still being set up. Everything else in this version works without one.</li>
+              <li>Online voting: every voter gets a personal link, sent by email from COLection or copied and sent by hand. People vote from wherever they are, and a link works once, for one person.</li>
+              <li>It runs beside voting at stations. A voter who votes in person can no longer use their link, and a voter who has voted online cannot be sent to a station, so nobody votes twice. Online ballots come over with no names when you stop online voting.</li>
+              <li>COLection Online, in a web browser, now has the same screens as the desktop program, including a voting desk that shows a QR code for each voter to scan, and the same Preferences with sound effects. Your look and licence follow you between the two.</li>
+            </ul>
+            <h3>Changes</h3>
+            <ul>
+              <li>Signing in asks for the website address if this copy does not know it yet, and remembers it.</li>
+            </ul>
+          </div>
+        </article>
+        <article class="release reveal">
           <header><h2>0.2.2</h2><p class="when">October 2026</p></header>
           <div>
             <h3>Extra voting desks</h3>
             <ul>
               <li>Other computers on the same network can join the host as extra voting desks, so several people can register and send voters at the same time. The host still keeps the one list and the ballots.</li>
               <li>A desk can search the list, register walk-ins, send people to a station or a phone, cancel a ballot and answer a call for help. It never sees how anyone voted.</li>
+              <li>Practice run: rehearse the whole election on a separate throwaway copy, with stations, phones and extra desks, made-up voters and random votes and a practice result. Your real election is never touched.</li>
               <li>A new Joined devices tab lists every desk, voting station, QR screen and phone connected, and can disconnect all voting stations, all extra host computers or all QR screens at once.</li>
               <li>Registering a walk-in whose name is already on the list now asks first, so nobody is added twice.</li>
+            </ul>
+            <h3>Changes</h3>
+            <ul>
+              <li>Seating plans are switched off for now, while COLection focuses on elections. Plan files you already made are untouched.</li>
             </ul>
             <h3>Fixes</h3>
             <ul>
@@ -123,7 +144,7 @@
         <a href="pricing.html">Pricing</a>
         <a href="terms.html">Terms</a>
       </nav>
-      <p>Counting elections for any group. Version 0.2.2.</p>
+      <p>Counting elections for any group. Version 0.2.3.</p>
     </div>
   </footer>
   <script src="js/site.js"></script>

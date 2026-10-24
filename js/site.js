@@ -134,15 +134,39 @@
     bar.style.setProperty("--sp", clamp(window.scrollY / max, 0, 1).toFixed(4));
   }
 
+
+  /* ---------- the home page rings: they turn, lean towards the mouse, and drift away as you scroll ---------- */
+  var hRings = $("home-rings"), hA = $("hr-a"), hB = $("hr-b"), hC = $("hr-c"), hDot = $("hr-dot");
+  var hmx = 0, hmy = 0, hsx = 0, hsy = 0, hIdle = 0;
+  if (hRings) window.addEventListener("pointermove", function (e) {
+    hmx = (e.clientX / window.innerWidth - .5) * 2; hmy = (e.clientY / window.innerHeight - .5) * 2;
+  }, { passive: true });
+  function homeRings() {
+    if (!hRings || !motion()) return false;
+    var r = hRings.getBoundingClientRect();
+    if (r.bottom < -80 || r.top > vh) return false;
+    var p = clamp(window.scrollY / (vh * .8), 0, 1);
+    hsx += (hmx - hsx) * .06; hsy += (hmy - hsy) * .06;
+    hRings.style.transform = "translate3d(" + (hsx * 12).toFixed(1) + "px," + (hsy * 8 - p * 40).toFixed(1) + "px,0) scale(" + (1 + p * .25).toFixed(3) + ")";
+    hRings.style.opacity = (.95 - p * .6).toFixed(3);
+    hA.setAttribute("transform", "rotate(" + (hIdle * 3 + p * 120).toFixed(1) + " 50 50)");
+    hB.setAttribute("transform", "rotate(" + (-hIdle * 5 - p * 200).toFixed(1) + " 50 50)");
+    hC.setAttribute("transform", "rotate(" + (hIdle * 8 + p * 320).toFixed(1) + " 50 50)");
+    hDot.setAttribute("r", (4.5 + .5 * Math.sin(hIdle * 1.6)).toFixed(2));
+    return true;
+  }
+
   /* ---------- one loop ---------- */
   var queued = false;
   function frame(now) {
     queued = false;
     vh = window.innerHeight;
     var dt = lastT ? Math.min(.1, (now - lastT) / 1000) : 0;
-    lastT = now; idle += dt;
+    lastT = now; idle += dt; hIdle += dt;
     heroP = track ? progress(track) : 0;
+    var turning = homeRings();
     hero(); lightWords(); steps(); growReport(); drift(); topBar();
+    if (turning) request();
     if (track) {
       var r = track.getBoundingClientRect();
       if (r.bottom > 0 && r.top < vh && pinned()) request();               /* keep the rings turning while they are on screen */

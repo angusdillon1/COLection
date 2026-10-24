@@ -457,7 +457,7 @@ figcaption { margin-top: 14px; font-size: .88rem; color: var(--mute); text-align
 .actions.centre { justify-content: center; }
 .what { padding: clamp(70px, 12vh, 130px) 0 clamp(30px, 6vh, 60px); }
 .what h2, .band h2 { font-size: clamp(2rem, 4.4vw, 3.2rem); margin-bottom: .7em; }
-.what-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(20px, 3vw, 40px); }
+.what-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(20px, 3vw, 40px); }
 .what-card { background: var(--fog); border: 1px solid var(--rule); border-radius: 20px; overflow: hidden; }
 .what-card img { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; object-position: top left; display: block; border-bottom: 1px solid var(--rule); }
 .what-card h3 { font-size: 1.3rem; margin: 20px 22px 8px; }
@@ -498,3 +498,15 @@ figcaption { margin-top: 14px; font-size: .88rem; color: var(--mute); text-align
 }
 .download-simple .actions { display: flex; justify-content: center; margin-inline: auto; }
 .actions.centre { display: flex; justify-content: center; margin-inline: auto; }
+
+/* ---- small touches on the short home page ---- */
+.home-hero-copy > * { animation: rise .9s var(--ease) both; }
+.home-hero-copy > :nth-child(2) { animation-delay: .1s; }
+.home-hero-copy > :nth-child(3) { animation-delay: .2s; }
+.home-hero-copy > :nth-child(4) { animation-delay: .3s; }
+@keyframes rise { from { opacity: 0; transform: translateY(22px); } }
+.home-rings { will-change: transform, opacity; }
+.who-line.words { font-size: clamp(1.4rem, 3vw, 2.2rem); line-height: 1.25; letter-spacing: -.03em; font-weight: 600; max-width: 28em; }
+.what-card { transition: transform .5s var(--ease), box-shadow .5s ease; }
+.what-card:hover { transform: translateY(-4px); box-shadow: 0 18px 40px -22px rgba(11, 20, 36, .35); }
+@media (prefers-reduced-motion: reduce) { .home-hero-copy > * { animation: none; } .what-card { transition: none; } .what-card:hover { transform: none; } }

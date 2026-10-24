@@ -43,35 +43,30 @@
           </p>
           <p class="fine">Free for up to 50 voters. No account needed.</p>
         </div>
-        <svg class="home-rings" viewBox="-6 -6 112 112" aria-hidden="true" focusable="false">
+        <svg class="home-rings" id="home-rings" viewBox="-6 -6 112 112" aria-hidden="true" focusable="false">
           <g fill="none" stroke-width="8" stroke-linecap="round">
-            <path d="M80.6 24.3 A40 40 0 1 0 80.6 75.7" stroke="#2c5aa6"/>
-            <path d="M70.7 32.6 A27 27 0 1 0 70.7 67.4" stroke="#1f9d55"/>
-            <path d="M60.7 41 A14 14 0 1 0 60.7 59" stroke="#f5ac0b"/>
+            <path id="hr-a" d="M80.6 24.3 A40 40 0 1 0 80.6 75.7" stroke="#2c5aa6"/>
+            <path id="hr-b" d="M70.7 32.6 A27 27 0 1 0 70.7 67.4" stroke="#1f9d55"/>
+            <path id="hr-c" d="M60.7 41 A14 14 0 1 0 60.7 59" stroke="#f5ac0b"/>
           </g>
-          <circle cx="50" cy="50" r="4.5" fill="#1f9d55"/>
+          <circle id="hr-dot" cx="50" cy="50" r="4.5" fill="#1f9d55"/>
         </svg>
       </div>
     </section>
 
     <section class="what" id="what" aria-labelledby="what-title">
       <div class="wrap">
-        <h2 id="what-title">What it does.</h2>
+        <h2 id="what-title" class="reveal">What it does.</h2>
         <div class="what-grid">
           <article class="what-card reveal">
             <img src="images/app-ballot.png" width="1180" height="760" alt="A voting station showing four names ranked in order.">
             <h3>Run the vote</h3>
-            <p>Voters use a phone or a voting station in the room. A person at the desk sends each voter a ballot. It works without internet.</p>
+            <p>Voters use a phone or a voting station in the room. A person at the desk sends each voter a ballot. It works without internet. Online voting from home is on its way.</p>
           </article>
           <article class="what-card reveal">
             <img src="images/app-count.png" width="1280" height="774" alt="The results screen, with the winners listed.">
             <h3>Count it</h3>
             <p>Handles ranked votes, several seats and limits on groups. Every round is shown, so the result can be checked.</p>
-          </article>
-          <article class="what-card reveal">
-            <img src="images/app-seating.png" width="1280" height="800" alt="A floor plan of a dinner with round tables and guests.">
-            <h3>Seat the room</h3>
-            <p>Plan the tables for a dinner or event, keep people together or apart, and print place cards.</p>
           </article>
         </div>
         <p class="actions centre"><a class="textlink" href="how-it-works.html">See how it works, step by step</a></p>
@@ -80,12 +75,12 @@
 
     <section class="who" aria-label="Who it is for">
       <div class="wrap">
-        <p class="who-line">Made for colleges, student unions, clubs, schools and community groups.</p>
+        <p class="who-line words" id="words">Made for colleges, student unions, clubs, schools and community groups.</p>
       </div>
     </section>
 
     <section class="band" id="price-band" aria-labelledby="price-title">
-      <div class="wrap band-grid">
+      <div class="wrap band-grid reveal">
         <div>
           <h2 id="price-title">Free to start.</h2>
           <p>Free for up to 50 voters, with every feature. For bigger groups, licences start from A$90 a year, and you pay once.</p>
@@ -95,7 +90,7 @@
     </section>
 
     <section class="band alt" id="custom" aria-labelledby="custom-title">
-      <div class="wrap band-grid">
+      <div class="wrap band-grid reveal">
         <div>
           <h2 id="custom-title">Need something specific?</h2>
           <p>COLection can be adapted to your group's own rules, reports or events. Tell us what you need and we will tell you what is possible.</p>
@@ -105,14 +100,14 @@
     </section>
 
     <section class="download" id="download" data-theme="dark" aria-labelledby="download-title">
-      <div class="wrap download-simple">
+      <div class="wrap download-simple reveal">
         <h2 id="download-title">Download COLection.</h2>
-        <p class="sub">Version 0.2.2 for Windows 10 and 11. Free for up to 50 voters.</p>
+        <p class="sub">Version 0.2.3 for Windows 10 and 11. Free for up to 50 voters.</p>
         <p class="actions">
-          <!-- Download links point at the GitHub release v0.2.2. For a new version, upload to a new release (tag v0.2.3 and so on) and change the version in these links. -->
-          <a class="btn light" href="https://github.com/angusdillon1/COLection/releases/download/v0.2.2/COLection-Setup-0.2.2.exe">Download the installer</a>
+          <!-- Download links point at the GitHub release v0.2.3. For a new version, upload to a new release (tag v0.2.3 and so on) and change the version in these links. -->
+          <a class="btn light" href="https://github.com/angusdillon1/COLection/releases/download/v0.2.3/COLection-Setup-0.2.3.exe">Download the installer</a>
         </p>
-        <p class="fine">Windows may warn you the first time, because the program is new. Choose <strong>More info</strong>, then <strong>Run anyway</strong>. <a href="help.html#install">Installation help</a> &middot; <a href="https://github.com/angusdillon1/COLection/releases/download/v0.2.2/COLection-0.2.2.zip">Download as a zip instead</a></p>
+        <p class="fine">Windows may warn you the first time, because the program is new. Choose <strong>More info</strong>, then <strong>Run anyway</strong>. <a href="help.html#install">Installation help</a> &middot; <a href="https://github.com/angusdillon1/COLection/releases/download/v0.2.3/COLection-0.2.3.zip">Download as a zip instead</a></p>
       </div>
     </section>
   </main>
@@ -131,7 +126,7 @@
         <a href="pricing.html">Pricing</a>
         <a href="terms.html">Terms</a>
       </nav>
-      <p>Counting elections for any group. Version 0.2.2.</p>
+      <p>Counting elections for any group. Version 0.2.3.</p>
     </div>
   </footer>
   <script src="js/site-config.js"></script>

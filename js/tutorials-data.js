@@ -21,7 +21,5 @@ window.COL_TUTORIALS = [
   { title: "Checking and counting", about: "The Check step, settling ties, reading the results, counting again and signing off." },
   { title: "Reports and exporting", about: "Choose what goes in the printed report, preview the PDF, and save, print or sign it." },
   { title: "If the host computer fails", about: "How a second computer takes over from a backup, so no vote is lost." },
-  { title: "Seating plans from scratch", about: "Draw the room, add guests and wishes, auto-arrange, and handle late changes." },
-  { title: "Printing place cards and guest lists", about: "Place-card styles and logos, the A to Z guest list, table lists and find-your-seat sheets." },
   { title: "Licences", about: "Entering, copying and removing a licence, and what happens when one ends." }
 ];
